@@ -1,0 +1,59 @@
+.header-grid{
+    display: grid ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-left: 2rem;
+    padding-right: 0.2rem;
+    background: #464775;
+}
+.heading {
+    padding: 16px;
+    padding-left:5% ;
+    text-align: left;
+    color: white;
+    font-size: 120%;
+    font-weight: 500;
+  }
+
+  .profile{
+    margin-right: 1rem;
+    margin-top: 0.7rem;
+    text-align: right;
+    color: #d6d4e9;
+  }
+  .profile :hover{
+      background-color: #6264a7;
+      border-radius: 25px;
+  }
+
+  #theme{
+    display: none;
+  }
+
+  .theme-grid{
+    display: grid ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: rgb(209, 208, 208);
+    position: fixed;
+    margin-left: 75rem;
+    margin-top:0.5rem;
+    width: 400px;
+    padding:2rem;
+   
+  }
+ 
+ 
+
+  .theme-grid :hover{
+    background-color: none;
+    border-radius: none;
+  }
+
+  #theme img{
+   
+    width:40%;
+    padding: 1rem;
+  }
+
+  

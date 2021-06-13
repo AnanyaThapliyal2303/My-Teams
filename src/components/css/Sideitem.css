@@ -1,0 +1,21 @@
+.eachitem{
+    padding-top: 10%;
+    padding-bottom: 20%;
+    text-align: center;
+    color: white;
+    width:100%;
+}
+
+.eachitem:hover{
+    background-color: #6264a7;
+    color: black;
+    border-left: white solid 1px;
+}
+
+.item_name{
+    padding: 0%;
+    font-size: 12px;
+    font-weight: 400px;
+    text-align: center;
+}
+
