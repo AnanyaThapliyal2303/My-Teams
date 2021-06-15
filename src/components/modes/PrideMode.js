@@ -1,6 +1,7 @@
 import React from 'react'
 
 function DarkMode() {
+
   document.getElementById("sidebar").style.backgroundColor="black";
   document.getElementById("chatMenu").style.backgroundColor="#141414";
   document.getElementById("chatMenuHeading").style.color="white";
@@ -15,14 +16,17 @@ function DarkMode() {
   document.getElementById("chatTextInput").style.borderBottom="solid 2px #9ea2ff";
   document.getElementById("userName").style.borderBottom="solid 1.5px  #0a0a0a";
   document.getElementById("chatMenuHeading").style.borderBottom=" solid 1.5px #000000 ";
-  document.getElementById("header-grid").style.backgroundColor="#474646";
-  document.getElementById("searchBar").style.backgroundColor= "#474646";
+  document.getElementById("header-grid").style.backgroundColor=" #0a0a0a";
+  document.getElementById("searchBar").style.backgroundColor= "#0a0a0a";
   document.getElementById("searchBar").style.color="white";
   document.getElementById("chatBoxWrapper").style.backgroundColor="#1f1f1f";
+  document.getElementById("more").style.backgroundColor="black";
+  document.getElementById("more").style.color="white";
   document.getElementById("smallIcons").style.backgroundColor="#1f1f1f";
   document.getElementById("smallIcons").style.color="white";
   document.getElementById("chatBoxBackground").style.backgroundColor="#1f1f1f";
   document.getElementById("messagesWrapper").style.backgroundColor="#1f1f1f";
+  document.getElementById("theme").style.backgroundColor=" #0a0a0a";
   document.getElementById("chatMenuWrapper").style.backgroundColor=" #141414";
   document.getElementById("chatMenu").style.backgroundColor="#141414";
   document.getElementById("postAddIcon").style.color=" white";

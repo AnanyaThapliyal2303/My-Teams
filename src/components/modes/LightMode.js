@@ -20,23 +20,20 @@ function LightMode() {
   document.getElementById("searchBar").style.backgroundColor= "#464775";
   document.getElementById("searchBar").style.color="white";
   document.getElementById("chatBoxWrapper").style.backgroundColor="white";
-  document.getElementById("more").style.backgroundColor="#464775";
-  document.getElementById("more").style.color="white";
   document.getElementById("smallIcons").style.backgroundColor="white";
   document.getElementById("smallIcons").style.color="rgb(95, 95, 95)";
-
   document.getElementById("messagesWrapper").style.backgroundColor="white";
-  document.getElementById("theme").style.backgroundColor=" rgb(209, 208, 208)";
- 
   document.getElementById("chatMenu").style.backgroundColor=" #f0f0f0";
-
   document.getElementById("chatTextInput").style.backgroundColor="white";
   document.getElementById("chatBoxBackground").style.backgroundColor="white";
   document.getElementById("chatMenuWrapper").style.backgroundColor=" #f0f0f0";
   document.getElementById("chat-grid").style.backgroundColor=" #f0f0f0";
   document.getElementById("postAddIcon").style.color="black";
-  
+
   
 }
 
+
+
 export default LightMode
+
