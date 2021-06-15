@@ -27,7 +27,9 @@ function DarkMode() {
   document.getElementById("chatMenu").style.backgroundColor="#141414";
   document.getElementById("postAddIcon").style.color=" white";
   document.getElementById("chat-grid").style.backgroundColor="#141414";
- 
+  document.getElementById("chatBoxBackground").style.backgroundColor="#1f1f1f";
+  document.getElementById("chatBoxTop").style.backgroundColor="#1f1f1f";
+
   
   
   

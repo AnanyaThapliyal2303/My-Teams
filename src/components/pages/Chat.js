@@ -55,9 +55,9 @@ function Chat() {
                     <Picker onEmojiClick={onEmojiClick} />
                     </div>
           
-                <div id="chatBoxWrapper"  >
-                <div id="chatBoxBackground"></div>
-                    <div id="chatBoxTop " className="chatBoxTop">
+                <div id="chatBoxWrapper"   >
+                <div id="chatBoxBackground" ></div>
+                    <div id="chatBoxTop">
                     
                     <div className="chatBoxBottom">
                         

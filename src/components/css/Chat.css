@@ -19,18 +19,24 @@
     
 }
 
+#chatBody{
+    background-color: black;
+}
+
 .chatBox{
     flex: 7.5;
     width:100%;
+    background-color: #f5f5f5;
 }
 
-.chatBoxTop{
+#chatBoxTop{
     margin-top: 4rem;
-    overflow-x:hidden ;
+    overflow-x:hidden;
     overflow-y: scroll;
     height: 79vh;
     padding-left: 3rem;
     padding-right: 2rem;
+    background-color: #f5f5f5;
 }
 
 #chatBoxBackground{
@@ -40,7 +46,7 @@
     padding-right: 2rem;
     position: fixed;
     width: 100%;
-    background-color: white;
+    background-color: #f5f5f5;
 }
 
 .chatBoxBottom{
@@ -69,16 +75,22 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#chatTextInput{
+    background-color:white;
+}
+
 .sendIcon{
     color: rgb(156, 155, 155);
     margin-left:0.5rem;
     margin-top: 74vh;
+    background-color: #f5f5f5;
 }
 
 .smallIcons{
     color: rgb(95, 95, 95);
     text-align: left;
     margin-top: 0.5rem;
+    background-color: #f5f5f5;
 }
 
 .sendIcon:hover{
@@ -103,18 +115,16 @@
     background-color: #f0f0f0;
 }
 
-.chatBoxWrapper{
-   
+#chatBoxWrapper{
     height: 100%;
    
 }
 
-.messagesWrapper
+#messagesWrapper
 { padding-Right:25px;
     padding-left: 20px;
-    margin-top: 3rem;
+    margin-top: 4rem;
     height:80vh;
-   
 }
 .postAddIcon{
     margin-top:0.2rem;
@@ -156,6 +166,7 @@ h2{
 #emojiPicker{
     position: fixed;
     display: none;
-    margin-left: 14rem;
-    margin-top: 13rem;
+    margin-left: 18rem;
+    margin-top: 20.5rem;
+    border: solid 0.5px grey;
 }
