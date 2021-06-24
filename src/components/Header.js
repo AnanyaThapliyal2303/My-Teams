@@ -3,8 +3,7 @@ import './css/Header.css'
 import Searchbar from './Searchbar'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
-import Light from './img/Light.png';
-import Dark from './img/Dark.png';
+
 import DarkMode from './modes/DarkMode';
 import LightMode from './modes/LightMode';
 import DarkModeToggle from "react-dark-mode-toggle";
@@ -26,24 +25,23 @@ function Header() {
     return (
 
         <div>
-        <div className="header-grid" id="header-grid">
-            <div className="heading">
-                
-                Microsoft Teams
+            <div className="header-grid" id="header-grid">
+                <div className="heading">
+                    Microsoft Teams
                 </div>
-                <Searchbar/>
-                <div className="profile">
+                <div style={{width:"10rem"}}>
+                    <Searchbar/>
+                </div>
+                <div className="profile" style={{marginLeft:"15rem",width:"8rem"}}>
                     <div id="toggleDiv" className="toggleDiv" >
                         <DarkModeToggle onChange={setDarkMode} checked={isDarkMode} size={44} className="toggleButton"/>
                     </div>
-                    <AccountCircleIcon  style={{ fontSize: 40, marginTop:"0.5rem" }} />
+                    <div id="profile_icon">
+                        <AccountCircleIcon id="circle_icon" style={{ fontSize: 40 }} />
+                    </div>
                 </div>
-        </div>
-          {/*  <div id="theme" className="theme-grid">
-                <img id="light" src={Light} alt="" onClick={LightMode}/>
-                <img id="dark" src={Dark} alt="" onClick={DarkMode}/> 
-    </div> */}
-</div>   
+            </div>
+        </div>   
     )
 }
 

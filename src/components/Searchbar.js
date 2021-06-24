@@ -7,14 +7,16 @@ import SearchIcon from '@material-ui/icons/Search';
 function Searchbar() {
    
     return (
-     <div class="container" >
+    <div class="container" >
      <Form>
        <div id="searchBar">
-       <SearchIcon className="icon" id="searchicon" style={{fontSize:20}}/>
+       <SearchIcon className="icon" id="searchicon" style={{fontSize:27}}/>
         <FormControl type="text" id="searching" placeholder="Search"  className="form-center" />
         </div>
       </Form>
-  </div>
+
+      
+    </div>
     )
 }
 

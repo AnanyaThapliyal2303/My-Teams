@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+}
+
+.video_connect_page{
+    display: flex;
+}
+
+.connect_page_container{
+    flex: 7.5;
+    text-align: center;
+    margin-top: 9vh;
+    margin-left: 11vh;
+}
+
+.flex-container {
+    height: calc(100% - 150px);
+    width: 100%;
+    /* margin: 0 auto; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 100vh;
+    width: 90vw;
+    max-width: 90vw;
+    max-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.div-send-msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn-down {
+    z-index: 2;
+    position: fixed; 
+    bottom: 0px;
+    width: 100%;
+    height: auto;
+}
+
+#icons_before_call{
+    text-align: center;
+}
+
+

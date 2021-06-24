@@ -21,6 +21,7 @@
     border-radius: 4px;
     background-color: #e9eaf6;
     max-width: 500px;
+    font-size: 16px;
 }
 
 .messageTime{
@@ -38,3 +39,4 @@
     background-color:#464775;
     color: white;
 }
+
