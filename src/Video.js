@@ -12,6 +12,8 @@ import StopScreenShareIcon from '@material-ui/icons/StopScreenShare'
 import CallEndIcon from '@material-ui/icons/CallEnd'
 import ChatIcon from '@material-ui/icons/Chat'
 import Sidebar from '../src/components/Sidebar'
+import ContactMailIcon from '@material-ui/icons/ContactMail';
+import FileCopyIcon from '@material-ui/icons/FileCopy';
 
 import { message } from 'antd'
 import 'antd/dist/antd.css'
@@ -499,13 +501,17 @@ class Video extends Component {
 
                   <div style={{marginTop: "3vh", marginLeft: "4vh"}}>
                   <div className="container">
-                            <div style={{ paddingTop: "20px" }}>
+                        <div className="connect-grid">
+                            <div style={{ paddingTop: "10px" }}>
                                 <Input value={window.location.href} disable="true"></Input>
-                                <Button style={{backgroundColor: "#3f51b5",color: "whitesmoke",marginLeft: "20px",
-                                    marginTop: "10px",width: "120px",fontSize: "10px"
-                                }} onClick={this.copyUrl}>Copy invite link</Button>
+                                <Button  id="copy_btn" style={{marginLeft: "10px",
+                                    marginTop: "0.1rem",width: "150px",fontSize: "12px"
+                                }} onClick={this.copyUrl}><FileCopyIcon style={{fontSize: 20}}/>Copy invite link</Button>
                             </div>
-
+                            <div id="contact-mail-icon">
+                                <ContactMailIcon style={{fontSize: 32}}/> SEND LINK VIA EMAIL
+                            </div>
+                        </div>
                             <Row id="main" className="flex-container" style={{ margin: 0, padding: 0 }}>
                                 <video id="my-video" ref={this.localVideoref} autoPlay muted style={{
                                     borderStyle: "solid",borderColor: "#bdbdbd",margin: "10px",objectFit: "fill",

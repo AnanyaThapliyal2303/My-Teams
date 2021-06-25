@@ -1,6 +1,7 @@
 .scheduler-container {
-    height: 93vh;
+    height: 92vh;
     width: 100vw;
     flex: 7.5;
-    margin-top: 7vh;
+    margin-top: 8vh;
+    margin-left: 10vh;
 }

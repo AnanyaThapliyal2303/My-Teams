@@ -36,6 +36,41 @@ body {
     text-align: center;
 }
 
+.connect-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 55vw;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-left: 20rem;
+}
+
+#contact-mail-icon{
+    margin-top: 0.75rem;
+    background-color: #3f51b5;
+    color: whitesmoke;
+    height: 4.55vh;
+    width: 12vw;
+    border-radius: 5px;
+    cursor:pointer;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#contact-mail-icon:hover{
+    background-color: #606db8;
+}
+
+#copy_btn{
+    background-color: #3f51b5;
+    color: whitesmoke;
+}
+
+#copy_btn:hover{
+    background-color: #606db8;
+}
+
 .div-send-msg {
     display: flex;
     align-items: center;
