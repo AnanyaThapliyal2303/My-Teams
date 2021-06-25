@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import io from 'socket.io-client'
 import faker from "faker"
-
+import emailjs from 'emailjs-com';
 import {IconButton, Badge, Input, Button} from '@material-ui/core'
 import VideocamIcon from '@material-ui/icons/Videocam'
 import VideocamOffIcon from '@material-ui/icons/VideocamOff'
@@ -14,14 +14,16 @@ import ChatIcon from '@material-ui/icons/Chat'
 import Sidebar from '../src/components/Sidebar'
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
-
 import { message } from 'antd'
 import 'antd/dist/antd.css'
-
 import { Row } from 'reactstrap'
 import Modal from 'react-bootstrap/Modal'
 import 'bootstrap/dist/css/bootstrap.css'
 import "./Video.css"
+import{ init } from 'emailjs-com';
+import emailkey from './emailkey';
+import { Mail } from '@material-ui/icons';
+init("user_5CZ2p7y5NryVd84AQesAp");
 
 const server_url = process.env.NODE_ENV === 'production' ? 'https://video.sebastienbiollo.com' : "http://localhost:4001"
 
@@ -35,6 +37,27 @@ const peerConnectionConfig = {
 var socket = null
 var socketId = null
 var elms = 0
+
+function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('default_service','template_jy1y16p', e.target, 'user_5CZ2p7y5NryVd84AQesAp')
+      .then((result) => {
+          alert(result.text);
+      }, (error) => {
+        alert(error.text);
+      });
+  }
+
+function showForm(){
+    if(document.getElementById("main")!=null)
+        {
+            if(document.getElementById("contact-form").style.display==="none")
+            document.getElementById("contact-form").style.display="block";
+            else
+            document.getElementById("contact-form").style.display="none";
+        }
+}
 
 class Video extends Component {
     constructor(props) {
@@ -404,7 +427,7 @@ class Video extends Component {
     }
 
     handleUsername = (e) => this.setState({ username: e.target.value })
-
+ 
     sendMessage = () => {
         socket.emit('chat-message', this.state.message, this.state.username)
         this.setState({ message: "", sender: this.state.username })
@@ -434,10 +457,16 @@ class Video extends Component {
         })
     }
 
+  
     connect = () => this.setState({ askForUsername: false }, () => this.getMedia())
+    
+    
+    
 
     render() {
+
         return (
+            
             <div class="video_connect_page">
                 <Sidebar/>
                 <div className="connect_page_container">
@@ -503,15 +532,31 @@ class Video extends Component {
                   <div className="container">
                         <div className="connect-grid">
                             <div style={{ paddingTop: "10px" }}>
-                                <Input value={window.location.href} disable="true"></Input>
+                                <Input value={window.location.href} disable="true" id="link-holder"></Input>
                                 <Button  id="copy_btn" style={{marginLeft: "10px",
                                     marginTop: "0.1rem",width: "150px",fontSize: "12px"
                                 }} onClick={this.copyUrl}><FileCopyIcon style={{fontSize: 20}}/>Copy invite link</Button>
                             </div>
-                            <div id="contact-mail-icon">
+
+                           
+                            <div id="contact-mail-icon" onClick={showForm}>
                                 <ContactMailIcon style={{fontSize: 32}}/> SEND LINK VIA EMAIL
-                            </div>
-                        </div>
+                            </div>  
+
+
+            </div>
+            
+                            {/*Send Form */}
+                            <form id="contact-form" onSubmit={sendEmail}><label>From: </label>
+                                <input id="inputs" type="text" name="from_name" value={this.state.username} readOnly/>
+                                <label>Invitee: </label>
+                                <input id="inputs" type="text" name="to_name" />
+                                <label>Email to: </label>
+                                <input id="inputs" type="email" name="to_email" />
+                                <label>Link: </label>
+                                <input id="inputs" name="link" value={window.location.href} readOnly/>
+                                <input id="submit" type="submit" value="Send"/>
+                            </form>
                             <Row id="main" className="flex-container" style={{ margin: 0, padding: 0 }}>
                                 <video id="my-video" ref={this.localVideoref} autoPlay muted style={{
                                     borderStyle: "solid",borderColor: "#bdbdbd",margin: "10px",objectFit: "fill",

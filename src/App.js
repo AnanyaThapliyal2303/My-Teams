@@ -8,12 +8,14 @@ import Chat from './components/pages/Chat'
 import SchedulerMain from './components/pages/SchedulerMain'
 
 
+
 class App extends Component {
 	render() {
 		return (
 			<div>
+		
 			<Header/>
-						
+			
 				<Router>
 					<Switch>
 						<Route path="/" exact component={Home} />		
@@ -23,6 +25,7 @@ class App extends Component {
 						<Route path="/:url" component={Video} />
 					</Switch>
 				</Router>
+				
 		    </div>
 		)
 	}

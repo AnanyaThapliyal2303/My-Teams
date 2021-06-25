@@ -40,10 +40,14 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    width: 55vw;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    margin-left: 20rem;
+    width: 60vw;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    margin-left: 17rem;
+}
+
+#link-holder{
+    width: 12.8vw;
 }
 
 #contact-mail-icon{
@@ -62,6 +66,10 @@ body {
     background-color: #606db8;
 }
 
+#link-value-holder{
+    width: 12.8vw;
+}
+
 #copy_btn{
     background-color: #3f51b5;
     color: whitesmoke;
@@ -70,6 +78,33 @@ body {
 #copy_btn:hover{
     background-color: #606db8;
 }
+
+#contact-form{
+    display: none;
+    margin-top: 1rem;
+    margin-left: 2.8rem;
+    width: 80vw;
+}
+
+#inputs{
+    margin-right: 0.5rem;
+    border-color: black;
+    width: 10wh;
+    border-radius: 5px;
+}
+
+#submit{
+    background-color: #3f51b5;
+    margin-left: 0.5rem;
+    border-radius: 5px;
+    color: white;
+}
+
+#submit:hover{
+    background-color: #606db8;
+    box-shadow: 2px 2px solid rgb(58, 57, 57);
+}
+
 
 .div-send-msg {
     display: flex;
