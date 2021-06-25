@@ -454,28 +454,28 @@ class Video extends Component {
                     </div>
                     :
                     <div>
-                        <div className="btn-down" style={{ backgroundColor: "whitesmoke", color: "whitesmoke", textAlign: "center" }}>
-                            <IconButton style={{ color: "#424242" }} onClick={this.handleVideo}>
-                                {(this.state.video === true) ? <VideocamIcon /> : <VideocamOffIcon />}
+                        <div id="btn-down">
+                            <IconButton style={{ color: "#303146"}} onClick={this.handleVideo}>
+                                {(this.state.video === true) ? <VideocamIcon style={{fontSize: 32}} /> : <VideocamOffIcon style={{fontSize: 32}}/>}
                             </IconButton>
 
                             <IconButton style={{ color: "#f44336" }} onClick={this.handleEndCall}>
-                                <CallEndIcon />
+                                <CallEndIcon style={{fontSize: 32}}/>
                             </IconButton>
 
-                            <IconButton style={{ color: "#424242" }} onClick={this.handleAudio}>
-                                {this.state.audio === true ? <MicIcon /> : <MicOffIcon />}
+                            <IconButton style={{ color: "#303146" }} onClick={this.handleAudio}>
+                                {this.state.audio === true ? <MicIcon style={{fontSize: 32}}/> : <MicOffIcon style={{fontSize: 32}}/>}
                             </IconButton>
 
                             {this.state.screenAvailable === true ?
-                                <IconButton style={{ color: "#424242" }} onClick={this.handleScreen}>
-                                    {this.state.screen === true ? <ScreenShareIcon /> : <StopScreenShareIcon />}
+                                <IconButton style={{ color: "#303146" }} onClick={this.handleScreen}>
+                                    {this.state.screen === true ? <ScreenShareIcon style={{fontSize: 32}}/> : <StopScreenShareIcon style={{fontSize: 32}}/>}
                                 </IconButton>
                                 : null}
 
                             <Badge badgeContent={this.state.newmessages} max={999} color="secondary" onClick={this.openChat}>
-                                <IconButton style={{ color: "#424242" }} onClick={this.openChat}>
-                                    <ChatIcon />
+                                <IconButton style={{ color: "#303146" }} onClick={this.openChat}>
+                                    <ChatIcon style={{fontSize: 32}}/>
                                 </IconButton>
                             </Badge>
                         </div>

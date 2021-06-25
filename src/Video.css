@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    
+    background-color: #f2f2f7;
 }
 
 .video_connect_page{
@@ -10,11 +12,12 @@ body {
     flex: 7.5;
     text-align: center;
     margin-top: 9vh;
-    margin-left: 11vh;
+    margin-left: 9.93vh;
+    
 }
 
 .flex-container {
-    height: calc(100% - 150px);
+    height: 65vh;
     width: 100%;
     /* margin: 0 auto; */
     display: flex;
@@ -40,16 +43,14 @@ body {
     text-align: center;
 }
 
-.btn-down {
+#btn-down {
     z-index: 2;
     position: fixed; 
-    bottom: 0px;
     width: 100%;
-    height: auto;
+    height: 10vh;
+    margin-top: 79vh;
+    background-color:#dbdbdf;
+    text-align: "center";
+    padding-top: 4px;
 }
-
-#icons_before_call{
-    text-align: center;
-}
-
 
