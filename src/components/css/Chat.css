@@ -5,6 +5,7 @@
 
 .chatMenu{
     flex:2.5;
+    margin-left: 10vh;
     background-color: #f0f0f0;
     height: 60vh;
     box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.4);

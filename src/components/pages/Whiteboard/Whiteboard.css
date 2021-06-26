@@ -1,0 +1,9 @@
+#whiteboard-container{
+border-radius: 5px;
+border: 2px solid rgb(32, 0, 119);
+}
+
+.whiteboard{
+    background-color: aqua;
+    cursor:crosshair;
+}

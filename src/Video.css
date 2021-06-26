@@ -80,7 +80,6 @@ body {
 }
 
 #contact-form{
-    display: none;
     margin-top: 1rem;
     margin-left: 2.8rem;
     width: 80vw;
@@ -88,6 +87,7 @@ body {
 
 #inputs{
     margin-right: 0.5rem;
+    margin-left: 0.2rem;
     border-color: black;
     width: 10wh;
     border-radius: 5px;
@@ -124,3 +124,8 @@ body {
     padding-top: 4px;
 }
 
+#whiteboard-container{
+   width:0px;
+   height:0px;
+    
+}

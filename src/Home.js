@@ -57,7 +57,7 @@ class Home extends Component {
                 <div id="addIcon" className="addIcon">
                     <AddBoxIcon onClick={displayGo} style={{fontSize:200, color:"white", marginBottom:"0rem"}} className="hvr-bob"/>
                     <p id="text2">Join a meeting</p>
-                    <div id="joinDetails">
+                    <div style={{display: "none"}} id="joinDetails">
                         <Input placeholder="URL" onChange={e => this.handleChange(e)} />
                         <div id="go_btn">
                             <Button id="btn" variant="contained" onClick={this.join} style={{ margin: "20px",marginleft: "50%" }} >Go</Button>
