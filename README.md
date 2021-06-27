@@ -1,17 +1,17 @@
 ## <ins>PROJECT</ins> : BUILD A MICROSOFT TEAMS CLONE  ( [Microsoft Engage 2021 Challenge](https://microsoft.acehacker.com/engage2021/?mc_cid=a82d11f2ad&mc_eid=89874c26af) )
 
-### <ins>Functionalities: </ins> 
+### Functionalities: 
 
-* ***Multi-user Video Calling + Realtime Chat***
+* <ins>Multi-user Video Calling + Realtime Chat</ins> 
 
   The Video Chat includes following functionalities:
   
-  1.Realtime Chat among multiple partcipants using Socket.IO\
-  2.Screen Sharing\
-  3.Audio mute/unmute\
-  4.Video on/off\
-  5.Whiteboard\
-  6.Start a meeting/ Join a chat with URL
+ * ***1.Realtime Chat among multiple partcipants using Socket.IO***\
+ * ***2.Screen Sharing***\
+ * ***3.Audio mute/unmute***\
+ * ***4.Video on/off***\
+ * ***5.Whiteboard***\
+ * ***6.Start a meeting + Join a chat with URL***
 
 
 ### <ins>Tech Stack: </ins>
