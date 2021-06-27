@@ -43,9 +43,8 @@ function DarkMode() {
     document.getElementById("videoIcon").style.boxShadow="none";
     document.getElementById("addIcon").style.boxShadow="none";
     document.getElementById("eventIcon").style.boxShadow="none";
-    document.getElementById("videoIcon").style.backgroundColor="#8a8686";
-    document.getElementById("addIcon").style.backgroundColor="#8a8686";
-    document.getElementById("eventIcon").style.backgroundColor="#8a8686";
+    document.getElementById("input_url").style.color="white";
+  
   }
   
   

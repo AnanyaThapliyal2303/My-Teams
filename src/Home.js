@@ -49,22 +49,22 @@ class Home extends Component {
             <div className="call_options_grid">
 
                 
-                <div id="videoIcon" className="videoIcon">
+                <div className="homeIcon" id="videoIcon">
               <Link to="/video"><VideocamIcon onClick={this.join}  style={{fontSize:200, color:"white", marginBottom:"0rem"}} className="hvr-bob"/>
               </Link> 
                 <p id="text1">New Meeting</p>
                 </div>
-                <div id="addIcon" className="addIcon">
+                <div className="homeIcon" id="addIcon">
                     <AddBoxIcon onClick={displayGo} style={{fontSize:200, color:"white", marginBottom:"0rem"}} className="hvr-bob"/>
                     <p id="text2">Join a meeting</p>
                     <div style={{display: "none"}} id="joinDetails">
-                        <Input placeholder="URL" onChange={e => this.handleChange(e)} />
+                        <Input placeholder="URL" onChange={e => this.handleChange(e)} id="input_url"/>
                         <div id="go_btn">
                             <Button id="btn" variant="contained" onClick={this.join} style={{ margin: "20px",marginleft: "50%" }} >Go</Button>
                         </div>
                     </div>
                 </div>
-                <div id="eventIcon" className="eventIcon">
+                <div className="homeIcon" id="eventIcon">
                     <EventIcon style={{fontSize:200, color:"white", marginBottom:"0rem"}} className="hvr-bob"/>
                     <p id="text3">Schedule</p>
                 </div>

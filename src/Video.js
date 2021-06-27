@@ -14,7 +14,7 @@ import ChatIcon from '@material-ui/icons/Chat'
 import Sidebar from '../src/components/Sidebar'
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
-import Whiteboard from './components/pages/Whiteboard/Whiteboard';
+import BorderColorIcon from '@material-ui/icons/BorderColor';
 import { message } from 'antd'
 import 'antd/dist/antd.css'
 import { Row } from 'reactstrap'
@@ -24,6 +24,7 @@ import "./Video.css"
 import{ init } from 'emailjs-com';
 import emailkey from './emailkey';
 import { Mail } from '@material-ui/icons';
+import Whiteboard from './components/pages/Whiteboard/Whiteboard';
 import $ from "jquery"
 init("user_5CZ2p7y5NryVd84AQesAp");
 
@@ -49,6 +50,23 @@ function sendEmail(e) {
       }, (error) => {
         alert(error.text);
       });
+  }
+
+  function showWhiteboard(){
+      if(document.getElementById("whiteboard-container").style.visibility==="hidden")
+      {
+      document.getElementById("whiteboard-container").style.visibility="visible"
+      document.getElementById("whiteboard-container").style.width="87vw"
+      document.getElementById("whiteboard-container").style.height="90vh"
+      }
+      else
+      {
+      document.getElementById("whiteboard-container").style.visibility="hidden" 
+      document.getElementById("whiteboard-container").style.width="0vw"
+      document.getElementById("whiteboard-container").style.height="0vh"
+    }
+     
+     
   }
 
 function showForm(){
@@ -511,6 +529,9 @@ class Video extends Component {
                                     <ChatIcon style={{fontSize: 32}}/>
                                 </IconButton>
                             </Badge>
+                            <IconButton style={{ color: "#303146" ,fontSize:"40" }}  onClick={showWhiteboard}>
+                            <BorderColorIcon/>
+                            </IconButton>
                         </div>
 
                         <Modal show={this.state.showModal} onHide={this.closeChat} style={{ zIndex: "999999" }}>
@@ -544,6 +565,7 @@ class Video extends Component {
                             <div id="contact-mail-icon" onClick={showForm}>
                                 <ContactMailIcon style={{fontSize: 32}}/> SEND LINK VIA EMAIL
                             </div>  
+                          
 
 
             </div>
@@ -560,6 +582,10 @@ class Video extends Component {
                                 <input id="submit" type="submit" value="Send"/>
                             </form>
                            
+                            <div id="whiteboard-container" style={{visibility:"hidden",width:"0vw",height:"0vh"}}>
+                            <Whiteboard/>
+                           </div>
+                        
                             <Row id="main" className="flex-container" style={{ margin: 0, padding: 0 }}>
                                 
                                 <video id="my-video" ref={this.localVideoref} autoPlay muted style={{

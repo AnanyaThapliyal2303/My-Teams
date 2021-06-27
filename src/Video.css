@@ -125,7 +125,6 @@ body {
 }
 
 #whiteboard-container{
-   width:0px;
-   height:0px;
-    
+    margin-top: 1rem;
+    margin-left: 0.6rem;
 }

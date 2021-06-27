@@ -14,7 +14,7 @@ flex:7.5;
   margin-left: 17rem;
   margin-right: 10rem;
   height: 73.4vh;
-  padding-left: 5rem;
+  padding-left: 7%;
   
 }
 
@@ -22,24 +22,6 @@ flex:7.5;
   margin-left: 1rem;
 }
 
-#videoIcon,#eventIcon,#addIcon{
-height: 30vh;
-width:30vh;
-padding: 0.6rem;
-background-color: #575774; 
-border-radius: 25%; 
-box-shadow: 2px 2px 4px #aaaaaa;
-}
-.videoIcon:hover{
-transition-delay: 0.1s;
-background-color: #6264a7;
-}
-
-
-.eventIcon:hover{
-  transition-delay: 0.1s;
-  background-color:  #6264a7;
-}
 
 p{
   font-size: 22px;
@@ -120,18 +102,6 @@ p{
   animation-direction: normal, alternate;
 }
 
-#videoIcon:hover{
-  transition-delay: 0.1s;
-  background-color: #6264a7;
-}
-#addIcon:hover{
-transition-delay: 0.1s;
-background-color: #6264a7;
-}
-#eventIcon:hover{
-transition-delay: 0.1s;
-background-color: #6264a7;
-}
 
 #text1,#text2,#text3{
   margin-top: 1.2rem;
@@ -155,4 +125,22 @@ background-color: #6264a7;
 
 #btn:hover{
   background-color: #464775;
+}
+
+.homeIcon{
+  height: 30vh;
+  width:30vh;
+  padding: 2.5%;
+  background-color: #575774; 
+  border-radius: 25%; 
+  box-shadow: 2px 2px 4px #aaaaaa;
+  }
+  
+.homeIcon:hover{
+  transition-delay: 0.1s;
+  background-color: #6264a7;
+  }
+  
+#input_url{
+  color: rgb(43, 42, 42);
 }

@@ -40,9 +40,7 @@ function LightMode() {
     document.getElementById("text1").style.color="black";
     document.getElementById("text2").style.color="black";
     document.getElementById("text3").style.color="black";
-    document.getElementById("videoIcon").style.backgroundColor=" #8e8fa3";
-    document.getElementById("addIcon").style.backgroundColor=" #8e8fa3";
-    document.getElementById("eventIcon").style.backgroundColor= "#8e8fa3"; 
+    document.getElementById("input_url").style.color="rgb(43, 42, 42)";
  
 }
 

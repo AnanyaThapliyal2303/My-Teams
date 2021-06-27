@@ -6,7 +6,7 @@ class Whiteboard extends React.Component {
      render() {
         return (
             <SketchField className="whiteboard"
-                        width='90vw' 
+                        width='86vw' 
                          height='90vh' 
                          tool={Tools.Pencil} 
                          lineColor='black'
