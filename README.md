@@ -14,7 +14,7 @@
  ***6.Start a meeting + Join a chat with URL***
 
 
-### <ins>Tech Stack: </ins>
+## Tech Stack:
 - React.js
 - Node.js
 - JavaScript
@@ -22,7 +22,7 @@
 - WebRTC
 - Socket.io
 
-### <ins>Details</ins> 
+## Details
 Your solution should be a fully functional prototype with at least one mandatory functionality - a minimum of two participants should be able connect with each other using your product to have a video conversation.
 
 ### <ins>Open-source Credits</ins>
