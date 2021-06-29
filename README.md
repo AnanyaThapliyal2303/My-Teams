@@ -23,7 +23,7 @@
 - JavaScript
 
 ## Open-source Credits:
-Video Meeting component was open-sourced and from [Video Meeting](https://github.com/0x5eba/Video-Meeting). Additional functionalities such as screen recording, emailing participants and whiteboard were added separately.
+Video Meeting component was open-sourced and from [Video Meeting](https://github.com/0x5eba/Video-Meeting). Additional functionalities such as emailing participants, screen recording and whiteboard were added separately.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
