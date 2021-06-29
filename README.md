@@ -2,31 +2,28 @@
 
 ## Functionalities: 
 
-### <ins>Multi-user Video Calling + Realtime Chat</ins> 
+### <ins>Multiple participants Video Calling with Realtime Chat</ins> 
 
-  The Video Chat includes following functionalities:
-  
+ ***1. Multiple participants allowed*** \
  ***1. Realtime Chat among multiple partcipants using Socket.IO*** \
+ ***1. Inviting participants via email*** \
  ***2. Screen Sharing*** \
- ***3. Audio mute/unmute*** \
- ***4. Video on/off*** \
+ ***3. Audio mute and unmute*** \
+ ***4. Video on and off*** \
  ***5. Whiteboard*** \
- ***6. Start a meeting + Join a chat with URL***
+ ***6. Start a meeting or Join a meeting with URL***
 
 
 ## Tech Stack:
-- React.js
-- Node.js
-- JavaScript
-- MongoDB
 - WebRTC
 - Socket.io
-
-## Details
-Your solution should be a fully functional prototype with at least one mandatory functionality - a minimum of two participants should be able connect with each other using your product to have a video conversation.
+- React.js
+- Firebase
+- Node.js
+- JavaScript
 
 ### <ins>Open-source Credits</ins>
-Video Meeting component was open-sourced and re-purposed from [Video Meeting](https://github.com/0x5eba/Video-Meeting).
+Video Meeting component was open-sourced and from [Video Meeting](https://github.com/0x5eba/Video-Meeting). Additional functionalities such as screen recording, emailing participants and whiteboard were added separately.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
