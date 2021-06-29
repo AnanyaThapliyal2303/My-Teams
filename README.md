@@ -12,6 +12,12 @@
  ***6. Video on and off*** \
  ***7. Whiteboard*** \
  ***8. Start a meeting or Join a meeting with URL***
+ 
+ ### <ins>Chat Rooms</ins> 
+ 
+ ***1. Group Chat functionality for multiple participants to chat together*** \
+ ***2. Sentimental Analysis for message entered to label as Positive, Negative or Neutral and help user decide whether to send the message or not (uses the AFINN-165 wordlist and Emoji Sentiment Ranking to perform sentiment analysis)*** \
+ ***3. Emoji Picker added*** \
 
 
 ## Technologies Used:
