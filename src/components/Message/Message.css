@@ -31,11 +31,11 @@
     text-align: left;
 }
 
-.message.own{
+.message_own{
     align-items: flex-end;
 }
 
-.message.own .messageText{
+.message_own .messageText{
     background-color:#464775;
     color: white;
 }

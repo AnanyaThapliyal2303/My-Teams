@@ -21,3 +21,9 @@
 .conversationName{
     font-weight: 500;
 }
+
+.each-chat{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+}

@@ -127,4 +127,7 @@ body {
 #whiteboard-container{
     margin-top: 1rem;
     margin-left: 0.6rem;
+    border: solid 2px rgb(20, 5, 87);
+    border-radius: 5px;
+
 }
