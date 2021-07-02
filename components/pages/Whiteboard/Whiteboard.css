@@ -1,0 +1,48 @@
+.whiteboard{
+    background-color: rgb(248, 248, 248);
+    padding:0.5rem;
+    cursor:crosshair;
+}
+
+.whiteboard_page{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: rgb(248, 248, 248);
+}
+
+.colorPalette{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+    height:60%;
+}
+.color{
+    width:3rem;
+    height:3rem;
+    border-radius: 95%;
+    margin-left: 1.2rem;
+    box-shadow: 4px 2px 2px rgb(177, 176, 176);
+    cursor:pointer;
+}
+#red{
+    background-color: red;
+    
+}
+
+#blue{
+    background-color: blue;
+}
+
+#green{
+    background-color: green;
+}
+
+#yellow{
+    background-color: yellow;
+}
+
+#black{
+    background-color: black;
+}
+

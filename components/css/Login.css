@@ -1,0 +1,42 @@
+.login {
+    background: linear-gradient(-45deg, #3e3e94, #c1c2fc, #3b3661, white);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 50% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+    
+  }
+
+.login_container{
+    padding-top: 40vh;
+    text-align: center;
+}
+
+.login-with-google-btn{
+    font-size: 20px;
+    font-family: cursive;
+    padding: 0.5rem;
+    border-radius: 30px;
+    border: solid 1px #3b3661;
+    box-shadow: 1px 1px 2px;
+    height:8vh;
+    width: 15.5vw;
+}
+
+.login-with-google-btn:hover{
+    height:8.5vh;
+    width: 15.7vw;
+    border-radius: 35px;
+    background-color: darkgrey;
+    box-shadow: 1px 1px 2px 2px;
+}

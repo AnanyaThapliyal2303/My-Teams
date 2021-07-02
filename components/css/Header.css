@@ -1,0 +1,59 @@
+.header-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding-left: 2vw;
+  padding-right: 0.2vw;
+  background: #464775;
+  height: 8.5vh;
+  position: fixed;
+  width: 100vw;
+  z-index: 99999;
+}
+.heading {
+  padding-left: 2%;
+  text-align: left;
+  color: white;
+  font-size:1.3vw;
+  font-weight: 500;
+  margin-top: 1.7vh;
+  width: 11vw;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  color: #d6d4e9;
+  margin-left: 0%;
+  height: 8vh;
+}
+
+#profile_icon{
+  margin-top: 0.5rem;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 0.75vw;
+}
+
+#profile_icon:hover{
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: solid 3px #686aa5;
+  
+}
+
+.toggleDiv {
+  margin-top: 1rem;
+  margin-right: 4rem;
+}
+
+.toggleDiv:hover {
+  background: none;
+}
+
+.toggleButton {
+  position: fixed;
+}

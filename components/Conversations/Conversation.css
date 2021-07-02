@@ -1,0 +1,34 @@
+.conversation{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.conversation:hover{
+    background-color: lightgray;
+}
+
+.conversationImg{
+    object-fit: cover;
+    margin-right: 15px;
+    background-color:wheat;
+    border: solid 2px tomato;
+}
+
+.conversationName{
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+}
+
+.lastConversation{
+    color: black;
+}
+
+.each-chat{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+}
