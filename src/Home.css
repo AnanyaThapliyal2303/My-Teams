@@ -10,10 +10,10 @@ flex:7.5;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  margin-top: 12rem;
-  margin-left: 17rem;
-  margin-right: 10rem;
-  height: 73.4vh;
+  margin-top: 31vh;
+  margin-left: 14vw;
+  margin-right: 10vh;
+  height: 68vh;
   padding-left: 7%;
   
 }
@@ -104,12 +104,13 @@ p{
 
 
 #text1,#text2,#text3{
-  margin-top: 1.2rem;
-  margin-left: 2rem;
+  margin-top: 1.5vh;
+  margin-left: 2.1vw;
+  font-size: 1.5vw;
 }
 
 #text3{
-  margin-left: 3.5rem;
+  margin-left: 3.4vw;
 }
 
 #go_btn{

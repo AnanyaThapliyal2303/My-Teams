@@ -6,4 +6,5 @@
   padding-left: 0rem;
   margin-top: 8vh;
   position: fixed;
+  z-index: 9999;
 }

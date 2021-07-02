@@ -1,35 +1,32 @@
 ## <ins>PROJECT</ins> : BUILD A MICROSOFT TEAMS CLONE  ( [Microsoft Engage 2021 Challenge](https://microsoft.acehacker.com/engage2021/?mc_cid=a82d11f2ad&mc_eid=89874c26af) )
 
-## Functionalities: 
+### Functionalities: 
 
-### <ins>Multiple participants Video Calling with Realtime Chat</ins> 
+* <ins>Multi-user Video Calling + Realtime Chat</ins> 
 
- *1. Multiple participants allowed* \
- *2. Realtime Chat among multiple partcipants using Socket.IO*\
- *3. Inviting participants via email* \
- *4. Screen Sharing*\
- *5. Audio mute and unmute*\
- *6. Video on and off* \
- *7. Whiteboard* \
- *8. Start a meeting or Join a meeting with URL*
- 
- ### <ins>Chat Rooms</ins> 
- 
- *1. Group Chat functionality for multiple participants to chat together* \
- *2. **Sentimental Analysis** for message entered to label as Positive, Negative or Neutral and help user decide whether to send the message or not (uses the **AFINN-165 wordlist and Emoji Sentiment Ranking** to perform sentiment analysis)* \
- *3. Emoji Picker added externally to add to the text input message*
+  The Video Chat includes following functionalities:
+  
+ * ***1.Realtime Chat among multiple partcipants using Socket.IO***\
+ * ***2.Screen Sharing***\
+ * ***3.Audio mute/unmute***\
+ * ***4.Video on/off***\
+ * ***5.Whiteboard***\
+ * ***6.Start a meeting + Join a chat with URL***
 
 
-## Technologies Used:
-- WebRTC
-- Socket.io
+### <ins>Tech Stack: </ins>
 - React.js
-- Firebase
 - Node.js
 - JavaScript
+- MongoDB
+- WebRTC
+- Socket.io
 
-## Open-source Credits:
-Video Meeting component was open-sourced and from [Video Meeting](https://github.com/0x5eba/Video-Meeting). Additional functionalities such as emailing participants, screen recording and whiteboard were added separately.
+### <ins>Details</ins> 
+Your solution should be a fully functional prototype with at least one mandatory functionality - a minimum of two participants should be able connect with each other using your product to have a video conversation.
+
+### <ins>Open-source Credits</ins>
+Video Meeting component was open-sourced and re-purposed from [Video Meeting](https://github.com/0x5eba/Video-Meeting).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

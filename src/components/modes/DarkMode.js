@@ -32,6 +32,8 @@ function DarkMode() {
   document.getElementById("chat-grid").style.backgroundColor="#141414";
   document.getElementById("chatBoxBackground").style.backgroundColor="#1f1f1f";
   document.getElementById("chatBoxTop").style.backgroundColor="#1f1f1f";
+  document.getElementById("lastConversation").style.color="white";
+  document.getElementById("conversationName").style.color="white";
   }
   
   if(document.getElementById("callPage")!=null)
@@ -44,7 +46,7 @@ function DarkMode() {
     document.getElementById("addIcon").style.boxShadow="none";
     document.getElementById("eventIcon").style.boxShadow="none";
     document.getElementById("input_url").style.color="white";
-  
+
   }
   
   

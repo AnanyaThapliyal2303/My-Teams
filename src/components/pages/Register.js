@@ -1,4 +1,4 @@
-import { db, auth } from "../../firebase";
+import { db,auth } from "./firebase";
 import React, { useState, useEffect } from "react";
 import { Button, Input } from "@material-ui/core";
 import "../css/Register.css"

@@ -1,52 +1,32 @@
-import { db, auth } from "../../firebase";
-import React, { useState, useHistory } from "react";
-import { Button, Input } from "@material-ui/core";
-import "../css/Login.css"
-import {Link} from 'react-router-dom';
+import { Button } from '@material-ui/core';
+import React from 'react';
+import {auth,provider} from './firebase';
+import { actionTypes } from '../../reducer';
+import { useStateValue } from '../../StateProvider';
+import '../css/Login.css'
 
 function Login() {
-    const [username, setUsername] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-
-    const handleLogin = (e) => {
-      
-        e.preventDefault();
-        if (email === "" || password === "") {
-          alert("All fields are required");
-          return;
-        }
-        try{
-       auth.signInWithEmailAndPassword(email, password);
-       {/*history.push("/home") */}
-        } catch(error) {
-         alert(error.message);
-        }
-    
-  
-      };
+    const [{},dispatch] = useStateValue();
+    const signIn = () => {
+        auth
+            .signInWithPopup(provider)
+            .then((result) => {
+                dispatch({
+                    type: actionTypes.SET_USER,
+                    user: result.user,
+                })
+            })
+            .catch((error) => alert(error.message));
+    }
     return (
-        <div id="login_page">
-           <Link to="/register"><Button>Register</Button></Link> 
-            <form className="login_form">
-          
-
-            <Input
-              placeholder="email"
-              type="text"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <Input
-              placeholder="password"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <Button type="submit" onClick={handleLogin}>Login</Button>
-          </form>
+        <div className="login" style={{height:"100vh"}}>
+           <div className="login_container">
+           <Button type="submit" class="login-with-google-btn" onClick={signIn}>
+                Sign in with Google
+            </Button>
+           </div>
         </div>
-    )
+    );
 }
 
 export default Login

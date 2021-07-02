@@ -1,20 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Sidebar from "../Sidebar";
 import "../css/Chat.css";
-import Conversation from "../Conversations/Conversation";
-import PostAddIcon from "@material-ui/icons/PostAdd";
+import ChatSidebar from "../Conversations/ChatSidebar";
 import SendIcon from "@material-ui/icons/Send";
 import AttachFileIcon from "@material-ui/icons/AttachFile";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import MicIcon from "@material-ui/icons/Mic";
 import "../Message/Message.css";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import Picker from "emoji-picker-react";
-import SpeechRecognition, {
-  useSpeechRecognition,
-} from "react-speech-recognition";
 import Header from "../Header";
 import { Button,Input } from "@material-ui/core";
+import db from "./firebase";
+import firebase from "firebase";
+
+import {useStateValue} from '../../StateProvider';
+
 function openEmojis() {
   if (document.getElementById("emojiPicker").style.display === "none")
     document.getElementById("emojiPicker").style.display = "block";
@@ -22,14 +24,49 @@ function openEmojis() {
 }
 
 function Chat() {
+  const [input, setInput] = useState("");
   const [chosenEmoji, setChosenEmoji] = useState(null);
+
+  const {roomId} = useParams();
+  const [roomName, setRoomName] = useState("");
+  const [messages, setMessages] = useState([]);
+
+  const[{user}, dispatch] = useStateValue();
+
+  useEffect(() => {
+    if(roomId){
+      db.collection('rooms')
+      .doc(roomId)
+      .onSnapshot((snapshot) => setRoomName
+      (snapshot.data().name));
+        
+        db.collection("rooms")
+        .doc(roomId)
+        .collection("messages")
+        .orderBy("timestamp", "asc")
+        .onSnapshot((snapshot) => 
+        setMessages(snapshot.docs.map((doc) => 
+        doc.data()))
+        );
+    }
+  }, [roomId]);
 
   const onEmojiClick = (event, emojiObject) => {
     setChosenEmoji(emojiObject);
   };
 
   const EmojiData = ({ chosenEmoji }) =>
-    (document.getElementById("chatTextInput").value += chosenEmoji.emoji);
+    document.getElementById("chatTextInput").value += (chosenEmoji.emoji);
+
+  const sendMessage = (e) => {
+    e.preventDefault();
+    db.collection("rooms").doc(roomId).collection("messages").add({
+      message: input,
+      name: user.displayName,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    });
+    setInput("");
+  };
 
 
     //Implementing sentimental analysis for text input
@@ -54,26 +91,11 @@ function Chat() {
         <Sidebar />
         <div className="chatMenu" id="chatMenu">
           <h2 id="chatMenuHeading">Chat</h2>
-          <div
-            id="chatMenuWrapper"
-            className="chatMenuWrapper"
-            style={{ height: "83.5vh" }}
-          >
-            <div id="chat-grid" className="chat-grid">
-              <input
-                placeholder="Search for people"
-                className="chatMenuInput"
-              />
-              <div id="postAddIcon" className="postAddIcon">
-                <PostAddIcon style={{ fontSize: 36 }} />
-              </div>
-            </div>
-            <Conversation />
-          </div>
+            <ChatSidebar/>
         </div>
         <div className="chatBox" id="chatBox">
           <h3 className="userName" id="userName">
-            Apple
+            {roomName}
           </h3>
           <div style={{ display: "none" }} id="emojiPicker">
             <Picker onEmojiClick={onEmojiClick} />
@@ -86,12 +108,13 @@ function Chat() {
             <div id="chatBoxBackground"></div>
             <div id="chatBoxTop">
               <div className="chatBoxBottom">
-                <Input
+                <Input onChange={e => setInput(e.target.value)}
                   id="chatTextInput"
                   className="chatMessageInput"
                   placeholder="Type a new message"
+                  value={input}
                />
-                <SendIcon
+                <SendIcon onClick={sendMessage}
                   className="sendIcon"
                   id="sendIcon"
                   style={{ fontSize: 30 }}
@@ -119,25 +142,26 @@ function Chat() {
               </div>
 
               <div id="messagesWrapper">
-                <div className={`message ${true && `message_own`} `}>
-                  <div className="messageTop" id="messageTop">
-                    <img
-                      className="messageImg"
-                      src="https://ichef.bbci.co.uk/news/976/cpsprodpb/692A/production/_112922962_apple.jpg"
-                    />
-
-                    <p className="messageText">
-                      <div className="messageTime">5/24 12:24 PM</div>
-                      Earth is the third planet from the Sun and the only
-                      astronomical object known to harbor and support life.
-                      About 29.2% of Earth's surface is land consisting of
-                      continents and islands. The remaining 70.8% is covered
-                      with water, mostly by oceans, seas, gulfs, and other
-                      salt-water bodies, but also by lakes, rivers, and other
-                      freshwater, which together constitute the hydrosphere.
-                    </p>
-                  </div>
-                </div>
+                {messages.map(message =>(
+                        <div className={`message ${message.name ===user.displayName && `message_own`} `}>
+                        <div className="messageTop" id="messageTop">
+                          
+                          <p className="messageText">
+                          
+                            <div id="messageFrom">
+                              <span>~{message.name}</span>
+                            </div>
+                            <div id="main-message">
+                            {message.message}
+                            </div>
+                            <div className="messageTime">{new Date(message.timestamp?.toDate())
+                            .toString()}</div>
+                          </p>
+                          
+                        </div>
+                      </div>
+                ))}
+            
               </div>
             </div>
           </div>

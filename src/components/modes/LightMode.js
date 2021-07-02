@@ -32,6 +32,8 @@ function LightMode() {
   document.getElementById("chat-grid").style.backgroundColor=" #f0f0f0";
   document.getElementById("postAddIcon").style.color="black";
   document.getElementById("chatBoxTop").style.backgroundColor="#f0f0f0";
+  document.getElementById("lastConversation").style.color="black";
+  document.getElementById("conversationName").style.color="black";
   }
 
   if(document.getElementById("callPage")!=null)
@@ -41,6 +43,7 @@ function LightMode() {
     document.getElementById("text2").style.color="black";
     document.getElementById("text3").style.color="black";
     document.getElementById("input_url").style.color="rgb(43, 42, 42)";
+
  
 }
 

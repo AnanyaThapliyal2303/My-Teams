@@ -11,24 +11,24 @@ import {
   Link,
   Redirect,
 } from "react-router-dom";
-import Register from "./components/pages/Register";
 import Login from "./components/pages/Login";
+import { useStateValue } from "../src/StateProvider";
 
-class App extends Component {
-  render() {
-    return (
-      <div>
+function App() {
+  const [{ user }, dispatch] = useStateValue();
+
+  return (
+    <div>
+      {!user ? (
+        <Login />
+      ) : (
         <Router>
           <Switch>
-            <Route path="/register">
-              <Register />
-            </Route>
-
-            <Route path="/login">
-              <Login />
-            </Route>
-
             <Route path="/" exact component={Home} />
+
+            <Route path="/rooms/:roomId">
+              <Chat />
+            </Route>
 
             <Route path="/chat">
               <Chat />
@@ -42,9 +42,9 @@ class App extends Component {
             <Route path="/:url" component={Video} />
           </Switch>
         </Router>
-      </div>
-    );
-  }
+      )}
+    </div>
+  );
 }
 
 export default App;

@@ -1,7 +1,7 @@
 .form-center {
   margin-top: 0.9rem;
   border-radius: 0px 5px 5px 0px;
-  width: 70%;
+  width: 30vw;
   height: 27.5px;
   background-color: #dadae3;
   border: none;
@@ -12,7 +12,6 @@
   background-color: #dadae3;
   margin-top: 0.9rem;
   padding: 0.3rem;
-  margin-left: 2rem;
   border-radius: 5px 0 0 5px;
   color: grey;
 }

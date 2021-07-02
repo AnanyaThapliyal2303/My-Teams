@@ -18,7 +18,7 @@ export default class Scheduler extends Component {
             'next'
         ];
  
-        const { events } = this.props;
+        const {events} = this.props;
         scheduler.init(this.schedulerContainer, new Date(2020, 5, 10));
         scheduler.clearAll();
         scheduler.parse(events);

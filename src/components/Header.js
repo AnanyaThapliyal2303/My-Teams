@@ -3,11 +3,11 @@ import "./css/Header.css";
 import Searchbar from "./Searchbar";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
-
 import DarkMode from "./modes/DarkMode";
 import LightMode from "./modes/LightMode";
 import DarkModeToggle from "react-dark-mode-toggle";
 import { colors } from "@material-ui/core";
+import {useStateValue} from '../StateProvider';
 
 {
   /*function openMore(){
@@ -23,11 +23,13 @@ function Header() {
   const [isDarkMode, setDarkMode] = useState(() => null);
   if (isDarkMode != null) isDarkMode ? DarkMode() : LightMode();
 
+    const[{user}, dispatch] = useStateValue();
+
   return (
     <div>
       <div className="header-grid" id="header-grid">
-        <div className="heading">Microsoft Teams</div>
-        <div style={{ width: "10rem" }}>
+        <div className="heading">My Teams</div>
+        <div style={{ width: "10vw" }}>
           <Searchbar />
         </div>
         <div className="profile" style={{ marginLeft: "15rem", width: "8rem" }}>
@@ -39,8 +41,8 @@ function Header() {
               className="toggleButton"
             />
           </div>
-          <div id="profile_icon">
-            <AccountCircleIcon id="circle_icon" style={{ fontSize: 40 }} />
+          <div id="profile_div">
+            <img id="profile_icon" src={user?.photoURL} alt=""></img>
           </div>
         </div>
       </div>

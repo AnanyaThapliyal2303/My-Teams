@@ -78,11 +78,25 @@ function showRecorder() {
       const RecordView = () => {
         const { status, startRecording, stopRecording, mediaBlobUrl } =
           useReactMediaRecorder({ video: true });
-          
+
       };
     } else document.getElementById("recorder").style.display = "none";
    
   }
+  function imp_alert(){
+    alert('To start Screen Recording, select Share screen');
+  }
+  
+  function clickStart(){
+    setTimeout(function(){
+      alert("Start button activates when Stop is pressed!"); 
+   }, 2000);
+    document.getElementById("startButton").style.visibility="hidden";
+  }
+  function clickStop(){
+    document.getElementById("startButton").style.visibility="visible";
+  }
+
 
 function showWhiteboard() {
   if (
@@ -618,6 +632,10 @@ class Video extends Component {
         <Header />
         <div class="video_connect_page">
           <Sidebar />
+          {/*<div id="rec-outer-circle">
+                      <div id="rec-inner-circle">
+                      </div>
+          </div>*/}
           <div className="connect_page_container">
             {this.state.askForUsername === true ? (
               <div>
@@ -669,6 +687,26 @@ class Video extends Component {
               </div>
             ) : (
               <div>
+                         <div id="recorder" style={{ display: "none" }}>
+                  <ReactMediaRecorder
+                    screen
+                    render={({
+                      status,
+                      startRecording,
+                      stopRecording,
+                      mediaBlobUrl,
+                    }) => (
+                      <div>
+                        <button id="startButton" onClick={()=>{ imp_alert(); startRecording(); clickStart(); }}>
+                          Start Recording
+                        </button>
+
+                        <button onClick={()=>{ stopRecording(); clickStop(); }}>Stop Recording</button>
+						<Input type="text" value={mediaBlobUrl} placeholder="Recording URL"/>
+                      </div>
+                    )}
+                  />
+                </div>
                 <div id="btn-down">
                   <IconButton
                     style={{ color: "#303146" }}
@@ -733,26 +771,7 @@ class Video extends Component {
                   </IconButton>
                   <Button onClick={showRecorder}>Record</Button>
 
-                <div id="recorder" style={{ display: "none" }}>
-                  <ReactMediaRecorder
-                    screen
-                    render={({
-                      status,
-                      startRecording,
-                      stopRecording,
-                      mediaBlobUrl,
-                    }) => (
-                      <div>
-                        <button onClick={startRecording}>
-                          Start Recording
-                        </button>
-
-                        <button onClick={stopRecording}>Stop Recording</button>
-						<Input type="text" value={mediaBlobUrl}/>
-                      </div>
-                    )}
-                  />
-                </div>
+       
                 </div>
 
                 <Modal
@@ -808,13 +827,16 @@ class Video extends Component {
                           disable="true"
                           id="link-holder"
                         ></Input>
+                      </div>
+                      <div>
                         <Button
                           id="copy_btn"
                           style={{
-                            marginLeft: "10px",
-                            marginTop: "0.1rem",
+                            marginLeft: "1rem",
+                            marginTop: "1vh",
                             width: "150px",
                             fontSize: "12px",
+                            height:"5vh"
                           }}
                           onClick={this.copyUrl}
                         >
@@ -823,8 +845,9 @@ class Video extends Component {
                         </Button>
                       </div>
 
-                      <div id="contact-mail-icon" onClick={showForm}>
-                        <ContactMailIcon style={{ fontSize: 32 }} /> SEND LINK
+                      <div id="contact-mail-icon" onClick={showForm} style={{ marginTop: "1vh", height:"5vh",
+                    width:"15vw" }}>
+                        <ContactMailIcon style={{ fontSize: 28, marginTop: "0.6vh" }} /> SEND LINK
                         VIA EMAIL
                       </div>
                     </div>
@@ -867,7 +890,7 @@ class Video extends Component {
                     >
                       <Whiteboard />
                     </div>
-
+                    
 
                     <Row
                       id="main"

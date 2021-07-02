@@ -11,7 +11,7 @@ function Searchbar() {
           <SearchIcon
             className="icon"
             id="searchicon"
-            style={{ fontSize: 27 }}
+            style={{ fontSize: 27.1 }}
           />
           <FormControl
             type="text"
