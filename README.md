@@ -1,6 +1,6 @@
-## <ins>PROJECT</ins> : BUILD A MICROSOFT TEAMS CLONE  ( [Microsoft Engage 2021 Challenge](https://microsoft.acehacker.com/engage2021/?mc_cid=a82d11f2ad&mc_eid=89874c26af) )
+## BUILD A MICROSOFT TEAMS CLONE  ( [Microsoft Engage 2021 Challenge](https://microsoft.acehacker.com/engage2021/?mc_cid=a82d11f2ad&mc_eid=89874c26af) )
 
-### Functionalities: 
+### <ins>Functionalities</ins> 
 
 ### Multi-user Video Calling and Realtime Chat:
   
