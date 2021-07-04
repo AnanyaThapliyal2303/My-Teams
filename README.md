@@ -2,7 +2,7 @@
 
 ### <ins>Functionalities</ins> 
 
-### Multi-user Video Calling and Realtime Chat:
+### A. Multi-user Video Calling and Realtime Chat:
   
  ***1. Realtime Chat among multiple partcipants using Socket.IO***\
  ***2. Screen Sharing***\
@@ -12,9 +12,9 @@
  ***6. Start a meeting + Join a chat with URL***
 
 
-### Chat Rooms:
+### B. Chat Rooms:
 
-### Social:
+### C. Social:
  
 
 ### Tech Stack:
