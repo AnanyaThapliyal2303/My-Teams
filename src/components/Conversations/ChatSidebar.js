@@ -32,7 +32,7 @@ function ChatSidebar() {
               <div
             id="chatMenuWrapper"
             className="chatMenuWrapper"
-            style={{ height: "83.5vh" }}
+            
           >
             
             <Conversation addNewChat/>

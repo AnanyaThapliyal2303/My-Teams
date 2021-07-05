@@ -57,3 +57,28 @@
 .toggleButton {
   position: fixed;
 }
+
+#logout{
+  margin-top: 9vh;
+  font-weight: 500;
+  height: 5vh;
+  width:5.6vw ;
+  padding: 2px;
+  position: fixed;
+  margin-left: 88vw;
+  background-color: #dadae3;
+  border-radius: 10px;
+  border: 2px solid #464775;
+  cursor: pointer;
+}
+
+#logout:hover{
+  height: 5.1vh;
+  width:5.7vw ;
+  background-color: #cccde0;
+  z-index: 99999;
+}
+
+#whole-header{
+  z-index: 999999999;
+}

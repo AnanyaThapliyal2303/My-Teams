@@ -11,22 +11,6 @@ import { Router, Link } from "react-router-dom";
 function Sidebar() {
   return (
     <div className="sidebar" id="sidebar">
-      <Sideitem
-        icon={<GroupIcon style={{ fontSize: 40 }} />}
-        icon_name="Teams"
-      />
-      <Link to="/chat">
-        <Sideitem
-          icon={<ChatIcon style={{ fontSize: 40 }} />}
-          icon_name="Chat"
-        />
-      </Link>
-      <Link to="/schedule">
-        <Sideitem
-          icon={<DateRangeIcon style={{ fontSize: 40 }} />}
-          icon_name="Calendar"
-        />
-      </Link>
       <Link to="/home">
         <Sideitem
           icon={<CallIcon style={{ fontSize: 40 }} />}
@@ -34,9 +18,30 @@ function Sidebar() {
         />
       </Link>
 
+      <Link to="/social">
+      <Sideitem
+        icon={<GroupIcon style={{ fontSize: 40 }} />}
+        icon_name="Social"
+      />
+      </Link>
+
+      <Link to="/chat">
+        <Sideitem
+          icon={<ChatIcon style={{ fontSize: 40 }} />}
+          icon_name="Chat"
+        />
+      </Link>
+
+      <Link to="/schedule">
+        <Sideitem
+          icon={<DateRangeIcon style={{ fontSize: 40 }} />}
+          icon_name="Calendar"
+        />
+      </Link>
+
       <Sideitem
         icon={<AssignmentIcon style={{ fontSize: 40 }} />}
-        icon_name="Assignment"
+        icon_name="To-Do"
       />
     </div>
   );

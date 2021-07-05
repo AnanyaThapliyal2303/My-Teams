@@ -43,8 +43,10 @@ function LightMode() {
     document.getElementById("text2").style.color="black";
     document.getElementById("text3").style.color="black";
     document.getElementById("input_url").style.color="rgb(43, 42, 42)";
+}
 
- 
+if(document.getElementById("area")!=null){
+  document.getElementById("area").style.backgroundColor="#dadae3";
 }
 
 }

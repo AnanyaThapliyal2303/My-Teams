@@ -5,9 +5,9 @@
 
 .chatMenu {
   flex: 2.5;
-  margin-left: 10vh;
+  margin-left: 9vh;
   background-color: #f0f0f0;
-  height: 60vh;
+  height: 90.7vh;
   box-shadow: inset -7px 0 9px -7px rgba(0, 0, 0, 0.4);
 }
 
@@ -32,7 +32,7 @@
 #chatBoxTop {
   margin-top: 0.5rem;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
   height: 65vh;
   padding-left: 3rem;
   padding-right: 2rem;
@@ -40,7 +40,7 @@
 }
 
 #chatBoxBackground {
-  margin-top: 65vh;
+  margin-top: 63vh;
   height: 20vh;
   padding-left: 3rem;
   padding-right: 2rem;
@@ -57,7 +57,6 @@
   width: 90vw;
   height: 20px;
   padding-left: 12rem;
-
 }
 
 
@@ -119,7 +118,7 @@
 
 #chatBoxWrapper {
   height: 100%;
-  width: 68vw;
+  width: 71vw;
 
 
 }
@@ -200,3 +199,31 @@ a{
   color:black;
 }
 
+#analysis-result-div{
+  position: fixed;
+  margin-top: 68vh;
+  margin-left: 56vw;
+  z-index: 999;
+  padding-top: 0.01vh;
+  padding-left: 0.9vw;
+  padding-right: 0.1vw;
+  height: 15vh;
+  width: 15vw;
+  font-weight: 500;
+  border: 2px solid #464775;
+  border-radius: 25px;
+  display: none;
+  background-color: #f5eaea;
+}
+
+#cancelIcon{
+  position: fixed;
+  text-align: right;
+  margin-top: 0.65vh;
+  margin-left: 11.6vw;
+  z-index: 99999;
+  color: #464775;
+}
+#cancelIcon:hover{
+  color: #86868d;
+}

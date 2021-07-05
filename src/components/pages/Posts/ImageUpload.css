@@ -1,0 +1,41 @@
+.imageupload{
+    display: flex;
+    flex-direction: column;
+    margin-left: -7vw;
+    margin-top: 18.4vh;
+    margin-bottom: 10px;
+    background-color: rgb(231, 228, 228);
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border: 2px solid #464775;
+    border-radius: 20px;
+    height: 12vh;
+    width:60vw;
+}
+
+.imageupload__progress{
+    width: 100%;
+}
+
+#caption-input{
+    width: 20vw;
+    border-radius: 5px;
+}
+
+#caption-upload{
+    text-align: center;
+}
+
+#main-upload-div{
+    z-index:100000;
+}
+
+#actual-upload-btn{
+    border: 1px solid darkgray;
+    margin-bottom: 1vh;
+    background-color: #dadae3;
+}
+
+#actual-upload-btn:hover{
+    background-color: #bbbde4;
+}

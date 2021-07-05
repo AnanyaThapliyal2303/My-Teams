@@ -8,6 +8,7 @@ import LightMode from "./modes/LightMode";
 import DarkModeToggle from "react-dark-mode-toggle";
 import { colors } from "@material-ui/core";
 import {useStateValue} from '../StateProvider';
+import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 
 {
   /*function openMore(){
@@ -19,6 +20,17 @@ import {useStateValue} from '../StateProvider';
 } */
 }
 
+function Logout(){
+  window.location.replace("https://my-teams-172e9.web.app/");
+}
+
+function profileClick() {
+  if(document.getElementById("logout").style.display==="none")
+    document.getElementById("logout").style.display="block";
+  else
+    document.getElementById("logout").style.display="none";
+}
+
 function Header() {
   const [isDarkMode, setDarkMode] = useState(() => null);
   if (isDarkMode != null) isDarkMode ? DarkMode() : LightMode();
@@ -26,7 +38,7 @@ function Header() {
     const[{user}, dispatch] = useStateValue();
 
   return (
-    <div>
+    <div id="whole-header">
       <div className="header-grid" id="header-grid">
         <div className="heading">My Teams</div>
         <div style={{ width: "10vw" }}>
@@ -41,10 +53,13 @@ function Header() {
               className="toggleButton"
             />
           </div>
-          <div id="profile_div">
+          <div id="profile_div"  onClick={profileClick}>
             <img id="profile_icon" src={user?.photoURL} alt=""></img>
           </div>
         </div>
+      </div>
+      <div id="logout"  onClick={Logout} style={{display: "none"}}>
+      <PowerSettingsNewIcon />Logout
       </div>
     </div>
   );

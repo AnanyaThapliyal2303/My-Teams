@@ -41,9 +41,10 @@ class Home extends Component {
           <Sidebar />
           <div className="call_class" id="callPage">
             <div className="call_options_grid">
-              <div className="homeIcon" id="videoIcon">
+              <div  id="videoIcon">
                 <Link to="/video">
                   <VideocamIcon
+                   id="home_icon"
                     onClick={this.join}
                     style={{
                       fontSize: 200,
@@ -55,8 +56,9 @@ class Home extends Component {
                 </Link>
                 <p id="text1">New Meeting</p>
               </div>
-              <div className="homeIcon" id="addIcon">
+              <div  id="addIcon">
                 <AddBoxIcon
+                id="home_icon"
                   onClick={displayGo}
                   style={{
                     fontSize: 200,
@@ -84,8 +86,9 @@ class Home extends Component {
                   </div>
                 </div>
               </div>
-              <div className="homeIcon" id="eventIcon">
+              <div id="eventIcon">
                 <EventIcon
+                 id="home_icon"
                   style={{
                     fontSize: 200,
                     color: "white",

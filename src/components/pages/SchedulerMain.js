@@ -4,46 +4,39 @@ import Sidebar from "../Sidebar";
 import Header from "../Header";
 import db from "./firebase";
 import "../css/SchedulerMain.css";
+import firebase from './firebase';
 
 
 
 function SchedulerMain() {
 
-const[events, setEvents] = useState([]);
-
-useEffect(() => {
-  db.collection('events').onSnapshot((snapshot) => 
-          setEvents(snapshot.docs.map((doc) =>
-              ({
-                  id: doc.id,
-                  data: doc.data(),
-                  
-     
-              }))
-              
-      )
-
-  );
-},
- []);
-
- var start_date;
-
-{events.map(event =>(
-  start_date=event.data.start_date
- 
-))}
-
-alert(JSON.stringify(db.collection("events")))
 
 
-{/*{events.map(event =>(
-const data=[{
+const getAllEvents = async ()=>{
+	//  Create reference to the collection
+	const events_collection_ref = db.collection('events');
 
-   start_date:{event.data.start_date}
-},
-];
-))}*/}
+	// Fetch all events from the collection
+	const query_snaps = await events_collection_ref.get();
+	
+	// Initilaise variable to return
+	const return_data = {};
+
+	// Check size of snaps
+	// - IF 0 => No events available;
+	if (!query_snaps.size) return return_data;
+
+	// iterate through all documents of in the response;
+	// snap => snapshot of document
+	for(const snap of query_snaps.docs){
+		const document_id = snap.id;
+		const document = snap.data();
+
+		return return_data[document_id]=document;
+	}
+
+	return return_data;
+}
 
 
     return (
@@ -53,13 +46,8 @@ const data=[{
         <div id="SchedulerMainPage">
           <Sidebar />
           <div className="scheduler-container">
-            { events.map(event => (
-            <Scheduler />))}
-
-{events.map(event =>(
-  <input value={event.data.start_date}/>
-  ))}
-
+           
+          <Scheduler events={getAllEvents}/>
            
           </div>
         </div>

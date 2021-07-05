@@ -4,7 +4,7 @@ import 'dhtmlx-scheduler/codebase/dhtmlxscheduler_material.css';
 import './Scheduler.css'
  
 const scheduler = window.scheduler;
- 
+
 export default class Scheduler extends Component {
     componentDidMount() {
         scheduler.skin = 'material';

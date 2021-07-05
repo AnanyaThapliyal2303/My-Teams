@@ -1,12 +1,12 @@
-.call_class{
-flex:7.5;
+.call_class {
+  flex: 7.5;
   background-color: #f2f2f7;
 }
 
-.container2{
-  display:flex;
+.container2 {
+  display: flex;
 }
-.call_options_grid{
+.call_options_grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -15,15 +15,13 @@ flex:7.5;
   margin-right: 10vh;
   height: 68vh;
   padding-left: 7%;
-  
 }
 
-#joinDetails{
+#joinDetails {
   margin-left: 1rem;
 }
 
-
-p{
+p {
   font-size: 22px;
 }
 
@@ -85,13 +83,15 @@ p{
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
 }
-.hvr-bob:hover, .hvr-bob:focus, .hvr-bob:active {
+.hvr-bob:hover,
+.hvr-bob:focus,
+.hvr-bob:active {
   -webkit-animation-name: hvr-bob-float, hvr-bob;
   animation-name: hvr-bob-float, hvr-bob;
-  -webkit-animation-duration: .3s, 1.5s;
-  animation-duration: .3s, 1.5s;
-  -webkit-animation-delay: 0s, .3s;
-  animation-delay: 0s, .3s;
+  -webkit-animation-duration: 0.3s, 1.5s;
+  animation-duration: 0.3s, 1.5s;
+  -webkit-animation-delay: 0s, 0.3s;
+  animation-delay: 0s, 0.3s;
   -webkit-animation-timing-function: ease-out, ease-in-out;
   animation-timing-function: ease-out, ease-in-out;
   -webkit-animation-iteration-count: 1, infinite;
@@ -102,46 +102,52 @@ p{
   animation-direction: normal, alternate;
 }
 
-
-#text1,#text2,#text3{
+#text1,
+#text2,
+#text3 {
   margin-top: 1.5vh;
   margin-left: 2.1vw;
   font-size: 1.5vw;
 }
 
-#text3{
+#text3 {
   margin-left: 3.4vw;
 }
 
-#go_btn{
+#go_btn {
   margin-left: 2rem;
 }
 
-#btn{
-  width:4rem;
+#btn {
+  width: 4rem;
   background-color: #6264a7;
   color: white;
   border-radius: 5px;
 }
 
-#btn:hover{
+#btn:hover {
   background-color: #464775;
 }
 
-.homeIcon{
+.homeIcon {
   height: 30vh;
-  width:30vh;
+  width: 30vh;
   padding: 2.5%;
-  background-color: #575774; 
-  border-radius: 25%; 
+  background-color: #575774;
+  border-radius: 25%;
   box-shadow: 2px 2px 4px #aaaaaa;
-  }
-  
-.homeIcon:hover{
+}
+
+#home_icon:hover {
   transition-delay: 0.1s;
   background-color: #6264a7;
-  }
-  
-#input_url{
+}
+
+#home_icon {
+  background-color: #575774;
+  border-radius: 25%;
+  padding: 0.5rem;
+}
+#input_url {
   color: rgb(43, 42, 42);
 }

@@ -48,6 +48,10 @@ function DarkMode() {
     document.getElementById("input_url").style.color="white";
 
   }
+
+  if(document.getElementById("area")!=null){
+    document.getElementById("area").style.backgroundColor="#252525";
+  }
   
   
 }

@@ -14,6 +14,8 @@ import Header from "../Header";
 import { Button,Input } from "@material-ui/core";
 import db from "./firebase";
 import firebase from "firebase";
+import { Scrollbars } from 'react-custom-scrollbars';
+import CancelIcon from '@material-ui/icons/Cancel';
 
 import {useStateValue} from '../../StateProvider';
 
@@ -68,6 +70,14 @@ function Chat() {
     setInput("");
   };
 
+  function cancelAnalysisResult(){
+    document.getElementById("analysis-result-div").style.display="none";
+  }
+
+  function showAnalysisResult(){
+    document.getElementById("analysis-result-div").style.display="block";
+  }
+
 
     //Implementing sentimental analysis for text input
   function Sentiment_Analysis() {
@@ -81,7 +91,7 @@ function Chat() {
    var type= "Neutral";
    if(result.score<0)
    var type="Negative";
-    alert("Your message generated a score of: " + result.score+"\nYour message is: "+type );
+    document.getElementById("analysis-result").innerHTML = "<br/>Your message generated a score of: " + result.score  + "<br/>Your message is: "+type ;
   }
 
   return (
@@ -93,6 +103,10 @@ function Chat() {
           <h2 id="chatMenuHeading">Chat</h2>
             <ChatSidebar/>
         </div>
+        <div id="analysis-result-div">
+            <CancelIcon id="cancelIcon" style={{fontSize:"20px"}} onClick={cancelAnalysisResult}/>
+            <div id="analysis-result"></div>
+        </div>
         <div className="chatBox" id="chatBox">
           <h3 className="userName" id="userName">
             {roomName}
@@ -103,7 +117,7 @@ function Chat() {
               {chosenEmoji && <EmojiData chosenEmoji={chosenEmoji} />}
             </div>
           </div>
-
+        
           <div id="chatBoxWrapper">
             <div id="chatBoxBackground"></div>
             <div id="chatBoxTop">
@@ -135,12 +149,15 @@ function Chat() {
                     style={{ fontSize: 30 }}
                   />
 
-                  <Button id="analyze_btn" onClick={Sentiment_Analysis}>
+                  <Button id="analyze_btn" onClick={()=>{ Sentiment_Analysis(); showAnalysisResult();}}>
                     Run Analysis
                   </Button>
                 </div>
               </div>
-
+              
+          <Scrollbars  autoHide
+        autoHideTimeout={1000}
+        autoHideDuration={200}>
               <div id="messagesWrapper">
                 {messages.map(message =>(
                         <div className={`message ${message.name ===user.displayName && `message_own`} `}>
@@ -163,6 +180,7 @@ function Chat() {
                 ))}
             
               </div>
+              </Scrollbars>
             </div>
           </div>
         </div>

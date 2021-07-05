@@ -25,6 +25,10 @@
 
 .lastConversation{
     color: black;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 10rem;
 }
 
 .each-chat{
