@@ -4,7 +4,7 @@
 
 ### A. Multi-user Video Calling and Realtime Chat:
   
- ***1. Realtime Chat among multiple partcipants using Socket.IO***\
+ :one:***Realtime Chat among multiple partcipants using Socket.IO***\
  ***2. Screen Sharing***\
  ***3. Audio mute/unmute***\
  ***4. Video on/off***\
