@@ -4,18 +4,32 @@
 
 ### A. Multi-user Video Calling and Realtime Chat:
   
- :one:***Realtime Chat among multiple partcipants using Socket.IO***\
- ***2. Screen Sharing***\
- ***3. Audio mute/unmute***\
- ***4. Video on/off***\
- ***5. Whiteboard***\
- ***6. Start a meeting + Join a chat with URL***
-
-
-### B. Chat Rooms:
-
-### C. Social:
+ :one: ***Realtime Chat among multiple partcipants using Socket.IO***\
+ :two: ***Screen Sharing***\
+ :three: ***Audio mute/unmute***\
+ :four: ***Video on/off***\
+ :five: ***Whiteboard***\
+ :six: ***Start a meeting + Join a chat with URL***
  
+
+### B. Social:
+ 
+ :one: ***Realtime Chat among multiple partcipants using Socket.IO***\
+ :two: ***Screen Sharing***\
+ :three: ***Audio mute/unmute***\
+ :four: ***Video on/off***\
+ :five: ***Whiteboard***\
+ :six: ***Start a meeting + Join a chat with URL***
+
+
+### C. Chat Rooms:
+
+ :one: ***Realtime Chat among multiple partcipants using Socket.IO***\
+ :two: ***Screen Sharing***\
+ :three: ***Audio mute/unmute***\
+ :four: ***Video on/off***\
+ :five: ***Whiteboard***\
+ :six: ***Start a meeting + Join a chat with URL***
 
 ### Tech Stack:
 - React.js
