@@ -1,6 +1,6 @@
 ## BUILD A MICROSOFT TEAMS CLONE  ( [Microsoft Engage 2021 Challenge](https://microsoft.acehacker.com/engage2021/?mc_cid=a82d11f2ad&mc_eid=89874c26af) )
 
-### <ins>Functionalities</ins> 
+## <ins>Functionalities</ins> 
 
 ### A. Multi-user Video Calling and Realtime Chat:
   
@@ -31,7 +31,7 @@
  :five: ***Whiteboard***\
  :six: ***Start a meeting + Join a chat with URL***
 
-### Tech Stack:
+### <ins>Tech Stack</ins>
 - React.js
 - Node.js
 - JavaScript
