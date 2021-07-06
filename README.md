@@ -3,7 +3,7 @@
 
 ## <ins>Functionalities</ins> 
 
-### A. Multi-user Video Calling and Realtime Chat:
+### A) Multi-user Video Calling and Realtime Chat:
   
  :one: ***Realtime Chat among multiple partcipants using Socket.IO***\
  :two: ***Screen Sharing***\
@@ -18,7 +18,7 @@
  * If a room is not created beforehand a new conversation room is created as soon as a new meeting is started and all the chat is stores in it.
  * A video meeting can be started from within the chat whenever needed.
  
-### B. Social:
+### B) Social:
  
  :one: ***Realtime Chat among multiple partcipants using Socket.IO***\
  :two: ***Screen Sharing***\
@@ -28,7 +28,7 @@
  :six: ***Start a meeting + Join a chat with URL***
 
 
-### C. Chat Rooms:
+### C) Chat Rooms:
 
  :one: ***Realtime Chat among multiple partcipants using Socket.IO***\
  :two: ***Screen Sharing***\
