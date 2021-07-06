@@ -36,14 +36,12 @@
 :white_check_mark: Sentimental Score of the message typed\
 :white_check_mark: Whether the message is positive/negative/neutral
 
- :one: ***Realtime Chat among multiple partcipants using Socket.IO***\
- :two: ***Screen Sharing***\
- :three: ***Audio mute/unmute***\
- :four: ***Video on/off***\
- :five: ***Whiteboard***\
- :six: ***Start a meeting + Join a chat with URL***
+ :one: ***Create new Rooms with just a click***\
+ :two: ***Multiple participants allowed to converse in group chat room***\
+ :three: ***Start Video call with participants in the chat with ease***\
+ :four: ***Emoji Board attached to chat input***\
 
-## <ins>Tech Stack</ins>
+## <ins>Technologies</ins>
 - React.js
 - Node.js
 - JavaScript
@@ -51,8 +49,6 @@
 - WebRTC
 - Socket.io
 
-## <ins>Details</ins> 
-Your solution should be a fully functional prototype with at least one mandatory functionality - a minimum of two participants should be able connect with each other using your product to have a video conversation.
 
 ## <ins>Open-source Credits</ins>
 Video Meeting component was open-sourced and re-purposed from [Video Meeting](https://github.com/0x5eba/Video-Meeting).
