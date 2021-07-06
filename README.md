@@ -31,7 +31,7 @@
 ### C) Chat Rooms:
 
 #### :star:Special feature to run sentimental analysis on the typed text. When we type in a message and click on Run Analysis a result box is displayed that shows:
-:white_check_mark: Sentimental Score of the message typed
+:white_check_mark: Sentimental Score of the message typed\
 :white_check_mark: Whether the message is positive/negative/neutral
 
  :one: ***Realtime Chat among multiple partcipants using Socket.IO***\
