@@ -7,12 +7,14 @@
 
 ### A) Multi-user Video Calling and Realtime Chat:
   
- :one: ***Realtime Chat among multiple partcipants using Socket.IO***\
- :two: ***Screen Sharing***\
- :three: ***Audio mute/unmute***\
- :four: ***Video on/off***\
- :five: ***Whiteboard***\
- :six: ***Start a meeting + Join a chat with URL***
+ :one: ***Video calling for multiple participants***\
+ :two: ***Realtime Chat among multiple partcipants using Socket.IO***\
+ :three: ***Screen Sharing***\
+ :four: ***Audio mute and unmute***\
+ :five: ***Video on and off***\
+ :six: ***Screen Recording***\
+ :seven: ***Whiteboard***\
+ :eight: ***Start a meeting OR Join a chat with URL***
  
  ### :sparkles: <ins>Adopt Feature:</ins> 
  * Users can create a room before hand and start a conversation before meeting
