@@ -22,15 +22,17 @@
  
 ### B) Social:
  
- :one: ***Realtime Chat among multiple partcipants using Socket.IO***\
- :two: ***Screen Sharing***\
- :three: ***Audio mute/unmute***\
- :four: ***Video on/off***\
- :five: ***Whiteboard***\
- :six: ***Start a meeting + Join a chat with URL***
-
+ :one: ***Members/Users can add posts to share with others such as image to update them about any event such as an upcoming workshop,a ceritificate recieved etc.***\
+ :two: ***Easy upload funtion to add images in 2 clicks***\
+ :three: ***Option to add a caption to the image while uploading***\
+ :four: ***Ability for other users to view posts by others in social page and comment on the posts***\
+ :five: ***All functions take place realtime and database is updated immediately when a new post/comment is added. Then it is displayed on the social page.***\
 
 ### C) Chat Rooms:
+
+#### :star:Special feature to run sentimental analysis on the typed text. When we type in a message and click on Run Analysis a result box is displayed that shows:
+:white_check_mark: Sentimental Score of the message typed
+:white_check_mark: Whether the message is positive/negative/neutral
 
  :one: ***Realtime Chat among multiple partcipants using Socket.IO***\
  :two: ***Screen Sharing***\
