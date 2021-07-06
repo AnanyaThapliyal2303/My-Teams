@@ -12,7 +12,7 @@
  :five: ***Whiteboard***\
  :six: ***Start a meeting + Join a chat with URL***
  
- ### :sparkles: Adopt Feature: 
+ ### :sparkles: <ins>Adopt Feature:</ins> 
  * Users can create a room before hand and start a conversation before meeting
  * Realtime chat within meeting is stored in the database and available in the room even after meeting is ended.
  * If a room is not created beforehand a new conversation room is created as soon as a new meeting is started and all the chat is stores in it.
