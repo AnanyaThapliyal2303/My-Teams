@@ -39,7 +39,7 @@
  :one: ***Create new Rooms with just a click***\
  :two: ***Multiple participants allowed to converse in group chat room***\
  :three: ***Start Video call with participants in the chat with ease***\
- :four: ***Emoji Board attached to chat input***\
+ :four: ***Emoji Board attached to chat input***
 
 ## <ins>Technologies</ins>
 - React.js
