@@ -38,9 +38,17 @@
 
  :one: ***Create new Rooms with just a click***\
  :two: ***Multiple participants allowed to converse in group chat room***\
- :three: ***Start Video call with participants in the chat with ease***\
+ :three:***Start Video call with participants in the chat with ease***\
  :four: ***Searchbar to search through the chats***\
  :five: ***Emoji Board attached to chat input***
+ 
+ ### D) Notes: (CRUD Functionality enabled)
+ 
+:one: ***Create new notes with a title and content***\
+:two: ***Full fledged text editor implemented using React Quill***\
+:three:***Cloud storage to store all your notes permanently on Firebase and Firestore***\
+:four: ***Delete and edit contents of notes body and also it's title***\
+
 
 ## <ins>Technologies</ins>
 - React.js
