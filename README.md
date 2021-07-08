@@ -47,7 +47,7 @@
 :one: ***Create new notes with a title and content***\
 :two: ***Full fledged text editor implemented using React Quill***\
 :three:***Cloud storage to store all your notes permanently on Firebase and Firestore***\
-:four: ***Delete and edit contents of notes body and also it's title***\
+:four: ***Delete and edit contents of notes body and also it's title***
 
 
 ## <ins>Technologies</ins>
