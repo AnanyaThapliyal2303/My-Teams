@@ -9,17 +9,18 @@
   
  :one: ***Video calling for multiple participants***\
  :two: ***Realtime Chat among multiple partcipants using Socket.IO***\
- :three: ***Screen Sharing***\
- :four: ***Audio mute and unmute***\
- :five: ***Video on and off***\
- :six: ***Screen Recording***\
- :seven: ***Whiteboard***\
- :eight: ***Start a meeting OR Join a chat with URL***
+ :three: ***Send meeting invite via Email to participants from within the app***\
+ :four: ***Screen Sharing***\
+ :five: ***Audio mute and unmute***\
+ :six: ***Video on and off***\
+ :seven: ***Screen Recording***\
+ :eight: ***Whiteboard***\
+ :nine: ***Start a meeting OR Join a chat with URL***
  
  ### :sparkles: <ins>Adopt Feature:</ins> 
  * Users can create a room before hand and start a conversation before meeting
  * Realtime chat within meeting is stored in the database and available in the room even after meeting is ended.
- * If a room is not created beforehand a new conversation room is created as soon as a new meeting is started and all the chat is stores in it.
+ * If a room is not created beforehand a new conversation room is created as soon as a new meeting is started and all the chat is stored in it.
  * A video meeting can be started from within the chat whenever needed.
  
 ### B) Social:
@@ -59,10 +60,12 @@
 - Socket.io
 
 
-## <ins>Open-source Credits</ins>
+## <ins>Credits</ins>
 Video Meeting component was open-sourced and re-purposed from [Video Meeting](https://github.com/0x5eba/Video-Meeting).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Took suggestions and discussed project ideas with [Dwitrisha](https://github.com/Dwitrisha).
 
 ## Available Scripts
 
