@@ -1,0 +1,36 @@
+
+    .listItem{
+      cursor: pointer;
+     
+    }
+    .textSection{
+      width:40vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      height: 10vh;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 40vw;
+    }  
+    .deleteIcon{
+      margin-left: 7vw;
+     
+    }
+    .deleteIcon:hover{
+      color: red;
+    }
+
+    .newNoteInput{
+      color: black;
+    }
+  
+    .newNoteSubmission:hover{
+      background-color: #9090ac;
+      color: white;
+    }
+
+    .sidebarContainer{
+      background-color: #ececf1;
+    }

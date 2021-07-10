@@ -1,58 +1,73 @@
 import React, { useState, useEffect, Component } from 'react'
-import Scheduler from "./scheduler/Scheduler";
 import Sidebar from "../Sidebar";
 import Header from "../Header";
 import db from "./firebase";
 import "../css/SchedulerMain.css";
 import firebase from './firebase';
+import { useParams } from "react-router-dom";
+import EventCard from './ScheduleEvents/EventCard';
+import EventScheduler from './ScheduleEvents/EventScheduler';
+import AddIcon from '@material-ui/icons/Add';
 
-
-
-function SchedulerMain() {
-
-
-
-const getAllEvents = async ()=>{
-	//  Create reference to the collection
-	const events_collection_ref = db.collection('events');
-
-	// Fetch all events from the collection
-	const query_snaps = await events_collection_ref.get();
-	
-	// Initilaise variable to return
-	const return_data = {};
-
-	// Check size of snaps
-	// - IF 0 => No events available;
-	if (!query_snaps.size) return return_data;
-
-	// iterate through all documents of in the response;
-	// snap => snapshot of document
-	for(const snap of query_snaps.docs){
-		const document_id = snap.id;
-		const document = snap.data();
-
-		return return_data[document_id]=document;
-	}
-
-	return return_data;
+function showForm(){
+	if(document.getElementById("event-form-div").style.display==="none")
+		document.getElementById("event-form-div").style.display="block";
+	else
+		document.getElementById("event-form-div").style.display="none";
 }
 
 
-    return (
-      <div>
-        
-        <Header />
-        <div id="SchedulerMainPage">
-          <Sidebar />
-          <div className="scheduler-container">
-           
-          <Scheduler events={getAllEvents}/>
-           
-          </div>
-        </div>
-      </div>
-    );
+function SchedulerMain() {
+	const { eventId } = useParams();
+	const [events, setEvents] = useState([]);
+  
+	useEffect(() => {
+	  db.collection("events")
+		.orderBy("date", "asc")
+		.onSnapshot((snapshot) => {
+		  setEvents(
+			snapshot.docs.map((doc) => {
+			  return {
+				id: doc.id,
+				date: doc.data().date,
+				title: doc.data().title,
+				starttime: doc.data().starttime,
+				endtime: doc.data().endtime,
+				desc: doc.data().desc,
+				creator: doc.data().creator,
+			  };
+			})
+		  );
+		});
+	}, []);
+
+	return(
+		<div className="scheduler-main-div">
+			<Header/>
+			<div id="scheduler-page">
+			<Sidebar/>
+			<div id="scheduler-container">
+				<button id="btn-eventadd" onClick={showForm}><AddIcon style={{fontSize:38, color:"white"}} /></button>
+			<div>
+				<EventScheduler/>
+			</div>
+			<div id="scheduler-card-grid">
+			{events.map((event) => (
+				<EventCard 
+				id={event.id}
+				title={event.title}
+				desc={event.desc}
+				date={event.date}
+				starttime={event.starttime}
+				endtime={event.endtime}
+				creator={event.creator}
+				/>	
+			))}
+			</div>
+			</div>
+			</div>
+		</div>
+	);
   
 }
 export default SchedulerMain;

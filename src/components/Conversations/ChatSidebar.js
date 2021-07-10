@@ -3,7 +3,7 @@ import Conversation from './Conversation'
 import db from "../pages/firebase"
 import { Unsubscribe } from '@material-ui/icons';
 import { useStateValue } from '../../StateProvider';
-
+import './Conversation.css';
 
 function ChatSidebar() {
 
@@ -29,18 +29,26 @@ function ChatSidebar() {
     
     return (
         <div>
+            
               <div
             id="chatMenuWrapper"
             className="chatMenuWrapper"
             
           >
             
+          
             <Conversation addNewChat/>
+
                 {rooms.map(room => (
+                   
                     <Conversation key={room.id} id={room.id}
                     name={room.data.name} dp={user?.photoURL}/>
+                    
                 ))}
+
+                
           </div>
+        
         </div>
     )
 }

@@ -29,6 +29,8 @@ import { useReactMediaRecorder } from "react-media-recorder";
 import { ReactMediaRecorder } from "react-media-recorder";
 import Header from "./components/Header";
 import $ from "jquery";
+import db from "./components/pages/firebase";
+import firebase from "firebase";
 init("user_5CZ2p7y5NryVd84AQesAp");
 
 const server_url =
@@ -36,7 +38,9 @@ const server_url =
     ? "https://video.sebastienbiollo.com"
     : "http://localhost:4001";
 
-//Drawing Board
+var socket = null;
+var socketId = null;
+var elms = 0;
 
 var connections = {};
 const peerConnectionConfig = {
@@ -45,9 +49,25 @@ const peerConnectionConfig = {
     { urls: "stun:stun.l.google.com:19302" },
   ],
 };
-var socket = null;
-var socketId = null;
-var elms = 0;
+
+const getAllEvents = async () => {
+  var site = window.location.href.toString();
+  //http://localhost:3000/
+  var site_length = site.length;
+
+  var value = site.substring(site_length - 5, site_length);
+
+  const query_snap = await db
+    .collection("meetingLink")
+    .where("meetingUrl", "==", value)
+    .get();
+
+  if (!query_snap.size) throw new Error("No meeting link found");
+
+  // Meeting Document
+  const meeting_link = query_snap.docs[0].data();
+  return meeting_link;
+};
 
 function sendEmail(e) {
   e.preventDefault();
@@ -69,34 +89,30 @@ function sendEmail(e) {
     );
 }
 
-
 //Recording
 
 function showRecorder() {
-    if (document.getElementById("recorder").style.display === "none") {
-      document.getElementById("recorder").style.display = "block";
-      const RecordView = () => {
-        const { status, startRecording, stopRecording, mediaBlobUrl } =
-          useReactMediaRecorder({ video: true });
+  if (document.getElementById("recorder").style.display === "none") {
+    document.getElementById("recorder").style.display = "block";
+    const RecordView = () => {
+      const { status, startRecording, stopRecording, mediaBlobUrl } =
+        useReactMediaRecorder({ video: true });
+    };
+  } else document.getElementById("recorder").style.display = "none";
+}
+function imp_alert() {
+  alert("To start Screen Recording, select Share screen");
+}
 
-      };
-    } else document.getElementById("recorder").style.display = "none";
-   
-  }
-  function imp_alert(){
-    alert('To start Screen Recording, select Share screen');
-  }
-  
-  function clickStart(){
-    setTimeout(function(){
-      alert("Start button activates when Stop is pressed!"); 
-   }, 2000);
-    document.getElementById("startButton").style.visibility="hidden";
-  }
-  function clickStop(){
-    document.getElementById("startButton").style.visibility="visible";
-  }
-
+function clickStart() {
+  setTimeout(function () {
+    alert("Start button activates when Stop is pressed!");
+  }, 2000);
+  document.getElementById("startButton").style.visibility = "hidden";
+}
+function clickStop() {
+  document.getElementById("startButton").style.visibility = "visible";
+}
 
 function showWhiteboard() {
   if (
@@ -592,8 +608,33 @@ class Video extends Component {
   handleUsername = (e) => this.setState({ username: e.target.value });
 
   sendMessage = () => {
+
     socket.emit("chat-message", this.state.message, this.state.username);
-    this.setState({ message: "", sender: this.state.username });
+    getAllEvents().then((meetingLink) => {
+      var meeting_link_data = JSON.stringify(meetingLink);
+      var length = meeting_link_data.length;
+
+      for (var n = 0; n < length; n++) {
+        if (meeting_link_data.charAt(n) === "f") var pos = n;
+        var link = meeting_link_data.substring(pos, pos + 7);
+        if (link === "fullUrl") {
+          var roomId = meeting_link_data.substring(pos + 16, pos + 36);
+
+          //Enter message in normal chat db
+          db.collection("rooms").doc(roomId).collection("messages").add({
+            message: this.state.message,
+            name: this.state.username,
+
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+          });
+          
+          this.setState({ message: "", sender: this.state.username });
+        break; 
+          
+        }
+      }
+    }
+    );
   };
 
   copyUrl = () => {
@@ -687,7 +728,7 @@ class Video extends Component {
               </div>
             ) : (
               <div>
-                         <div id="recorder" style={{ display: "none" }}>
+                <div id="recorder" style={{ display: "none" }}>
                   <ReactMediaRecorder
                     screen
                     render={({
@@ -697,12 +738,30 @@ class Video extends Component {
                       mediaBlobUrl,
                     }) => (
                       <div>
-                        <button id="startButton" onClick={()=>{ imp_alert(); startRecording(); clickStart(); }}>
+                        <button
+                          id="startButton"
+                          onClick={() => {
+                            imp_alert();
+                            startRecording();
+                            clickStart();
+                          }}
+                        >
                           Start Recording
                         </button>
 
-                        <button onClick={()=>{ stopRecording(); clickStop(); }}>Stop Recording</button>
-						<Input type="text" value={mediaBlobUrl} placeholder="Recording URL"/>
+                        <button
+                          onClick={() => {
+                            stopRecording();
+                            clickStop();
+                          }}
+                        >
+                          Stop Recording
+                        </button>
+                        <Input
+                          type="text"
+                          value={mediaBlobUrl}
+                          placeholder="Recording URL"
+                        />
                       </div>
                     )}
                   />
@@ -770,8 +829,6 @@ class Video extends Component {
                     <BorderColorIcon />
                   </IconButton>
                   <Button onClick={showRecorder}>Record</Button>
-
-       
                 </div>
 
                 <Modal
@@ -836,7 +893,7 @@ class Video extends Component {
                             marginTop: "1vh",
                             width: "150px",
                             fontSize: "12px",
-                            height:"5vh"
+                            height: "5vh",
                           }}
                           onClick={this.copyUrl}
                         >
@@ -845,10 +902,19 @@ class Video extends Component {
                         </Button>
                       </div>
 
-                      <div id="contact-mail-icon" onClick={showForm} style={{ marginTop: "1vh", height:"5vh",
-                    width:"15vw" }}>
-                        <ContactMailIcon style={{ fontSize: 28, marginTop: "0.6vh" }} /> SEND LINK
-                        VIA EMAIL
+                      <div
+                        id="contact-mail-icon"
+                        onClick={showForm}
+                        style={{
+                          marginTop: "1vh",
+                          height: "5vh",
+                          width: "15vw",
+                        }}
+                      >
+                        <ContactMailIcon
+                          style={{ fontSize: 28, marginTop: "0.6vh" }}
+                        />{" "}
+                        SEND LINK VIA EMAIL
                       </div>
                     </div>
 
@@ -890,7 +956,6 @@ class Video extends Component {
                     >
                       <Whiteboard />
                     </div>
-                    
 
                     <Row
                       id="main"

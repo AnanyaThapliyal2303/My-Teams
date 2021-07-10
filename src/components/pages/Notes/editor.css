@@ -1,0 +1,37 @@
+
+    .root{
+      height: calc(100% - 35px);
+      position: absolute;
+      margin-left: 0;
+      width: 300px;
+      box-shadow: 0px 0px 2px black;
+    }
+    .titleInput{
+      height: 50px;
+      box-sizing: border-box;
+      border: none;
+      padding: 5px;
+      font-size: 24px;
+      width: calc(100% - 300px);
+      color: black;
+      padding-left: 50px;
+    }
+    .editIcon{
+      position: absolute;
+      margin-left: 310px;
+      margin-top: 12px;
+      color: white;
+      width: 10px;
+      height: 10px;
+    }
+    .editorContainer{
+      height: 100%;
+      box-sizing: border-box;
+    }
+    .reactQuill{
+      margin-left: 0.35vw;
+      height: 80vh;
+      z-index: 999;
+      background-color: white;
+      outline: 0.2px solid #464775;
+    }

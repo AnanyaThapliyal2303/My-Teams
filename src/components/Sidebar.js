@@ -6,7 +6,9 @@ import ChatIcon from "@material-ui/icons/Chat";
 import DateRangeIcon from "@material-ui/icons/DateRange";
 import CallIcon from "@material-ui/icons/Call";
 import AssignmentIcon from "@material-ui/icons/Assignment";
+import DescriptionIcon from '@material-ui/icons/Description';
 import { Router, Link } from "react-router-dom";
+
 
 function Sidebar() {
   return (
@@ -25,7 +27,7 @@ function Sidebar() {
       />
       </Link>
 
-      <Link to="/chat">
+      <Link to="/rooms/0nWgZheISBFavksHh4SB">
         <Sideitem
           icon={<ChatIcon style={{ fontSize: 40 }} />}
           icon_name="Chat"
@@ -35,14 +37,24 @@ function Sidebar() {
       <Link to="/schedule">
         <Sideitem
           icon={<DateRangeIcon style={{ fontSize: 40 }} />}
-          icon_name="Calendar"
+          icon_name="Scheduler"
         />
       </Link>
 
-      <Sideitem
-        icon={<AssignmentIcon style={{ fontSize: 40 }} />}
-        icon_name="To-Do"
-      />
+      <Link to="/notes">
+        <Sideitem
+          icon={<DescriptionIcon style={{ fontSize: 40 }} />}
+          icon_name="Notes"
+        />
+      </Link>
+
+      {/*<Link to="/todo">
+        <Sideitem
+          icon={<AssignmentIcon style={{ fontSize: 40 }} />}
+          icon_name="Todo"
+        />
+  </Link>*/}
+
     </div>
   );
 }

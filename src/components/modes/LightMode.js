@@ -34,6 +34,22 @@ function LightMode() {
   document.getElementById("chatBoxTop").style.backgroundColor="#f0f0f0";
   document.getElementById("lastConversation").style.color="black";
   document.getElementById("conversationName").style.color="black";
+
+  let y = document.getElementsByClassName("conversationName");
+  for (var j = 0; j < y.length; j++) {
+      y[j].style.color = "black";
+      }
+
+  let x = document.getElementsByClassName("lastConversation");
+  for (var i = 0; i < x.length; i++) {
+      x[i].style.color = "black";
+      }
+
+  let z = document.getElementsByClassName("conversation");
+  for (var k = 0; k < z.length; k++) {
+      z[k].style.color = "black";
+      }
+
   }
 
   if(document.getElementById("callPage")!=null)

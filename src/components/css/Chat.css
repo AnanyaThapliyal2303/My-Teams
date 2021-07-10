@@ -7,8 +7,7 @@
   flex: 2.5;
   margin-left: 9vh;
   background-color: #f0f0f0;
-  height: 90.7vh;
-  box-shadow: inset -7px 0 9px -7px rgba(0, 0, 0, 0.4);
+  height: 93vh;
 }
 
 .chatMenuInput {
@@ -27,6 +26,8 @@
   flex: 7.5;
   width: 100%;
   background-color: #f5f5f5;
+  
+  box-shadow: inset 7px 0 9px -7px rgba(0,0,0,0.4);
 }
 
 #chatBoxTop {
@@ -37,6 +38,8 @@
   padding-left: 3rem;
   padding-right: 2rem;
   background-color: #f5f5f5;
+  
+  box-shadow: inset 7px 0 9px -7px rgba(0,0,0,0.4);
 }
 
 #chatBoxBackground {
@@ -47,6 +50,8 @@
   position: fixed;
   width: 100%;
   background-color: #f5f5f5;
+  
+  box-shadow: inset 7px 0 9px -7px rgba(0,0,0,0.4);
 }
 
 .chatBoxBottom {
@@ -102,7 +107,7 @@
 .chatMenuWrapper,
 .chatBoxWrapper {
   padding: 5px;
-  height: 100%;
+  height: 100vh;
 }
 
 #chatMenu,
@@ -111,16 +116,16 @@
 }
 
 .chatMenuWrapper {
-  box-shadow: inset -7px 0 9px -7px rgba(0, 0, 0, 0.4);
   background-color: #f0f0f0;
-  width: 25vw;
+  padding:0px;
+  width: 23.65vw;
+  height:100%;
+  padding-bottom: 1vh;
 }
 
 #chatBoxWrapper {
   height: 100%;
   width: 71vw;
-
-
 }
 
 #messagesWrapper {
@@ -128,6 +133,7 @@
   padding-left: 20px;
   margin-top: 2rem;
   height: 80vh;
+  
 }
 .postAddIcon {
   margin-top: 0.2rem;
@@ -145,8 +151,8 @@ h3 {
   text-align: left;
   font-weight: 600;
   padding-left: 1rem;
-  margin-top: 1.35rem;
-  padding-bottom: 0.6rem;
+  margin-top: 1.4rem;
+  padding-bottom: 0.66rem;
   border-bottom: solid 0.8px rgb(204, 203, 203);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 22px;
@@ -158,6 +164,7 @@ h2 {
   font-weight: 800;
   padding-left: 1rem;
   padding-bottom: 0.1rem;
+  margin-top: 0.3rem;
   border-bottom: solid 1px rgb(185, 184, 184);
 }
 
@@ -168,8 +175,8 @@ h2 {
 
 #emojiPicker {
   position: fixed;
-  margin-left: 12rem;
-  margin-top: 12rem;
+  margin-left: 15.5vw;
+  margin-top: 23vh;
   border: solid 0.5px grey;
   z-index: 9;
 }

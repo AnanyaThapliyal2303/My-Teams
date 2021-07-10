@@ -3,6 +3,7 @@ import Video from "./Video";
 import Home from "./Home";
 import Header from "./components/Header";
 import Chat from "./components/pages/Chat";
+import EventScheduler from "./components/pages/ScheduleEvents/EventScheduler";
 import SchedulerMain from "./components/pages/SchedulerMain";
 import {
   BrowserRouter as Router,
@@ -13,7 +14,9 @@ import {
 } from "react-router-dom";
 import Login from "./components/pages/Login";
 import Post from "./components/pages/Posts/Post";
+import Notes from "./components/pages/Notes/Notes";
 import { useStateValue } from "../src/StateProvider";
+{/*import Todo from "./components/pages/Todo/Todo";*/}
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -43,8 +46,18 @@ function App() {
             <Route path="/social">
               <Post/>
             </Route>
+
+            <Route path="/notes">
+              <Notes/>
+            </Route>
+
+            {/*<Route path="/todo">
+              <Todo/>
+      </Route>*/}
+
             <Route path="/home" component={Home} />
             <Route path="/:url" component={Video} />
+
           </Switch>
         </Router>
       )}

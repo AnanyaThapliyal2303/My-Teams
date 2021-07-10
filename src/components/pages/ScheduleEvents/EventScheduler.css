@@ -1,0 +1,48 @@
+#event-form{
+    padding-top: 0.5vh;
+    padding-bottom: 2vh;
+    width:13vw;
+    height: 49vh;
+    text-align: center;
+    border-radius: 20px;
+}
+.inputs{
+    margin-top: 0px;
+    margin-bottom: 1vh;
+}
+
+#title,#desc,#date{
+    width: 11vw;
+    margin-top: 0vh;
+}
+#starttime,#endtime{
+    width: 5vw;
+}
+label{
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+#time{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+#submit{
+    margin-top: 0.8vh;
+}
+#event-form-div{
+    position: fixed;
+    text-align: center;
+    height: 54vh;
+    width: 15.2vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    border-radius: 25px;
+    border: 2px solid #575774;
+    margin-left: 39.3vw;
+    margin-top: 16vh;
+    background-image: linear-gradient(to bottom, #464775, #9d9cb4);
+}

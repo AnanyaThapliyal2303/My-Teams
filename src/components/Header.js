@@ -54,7 +54,7 @@ function Header() {
             />
           </div>
           <div id="profile_div"  onClick={profileClick}>
-            <img id="profile_icon" src={user?.photoURL} alt=""></img>
+            <img id="profile_icon" src={user?.photoURL} alt="" style={{cursor:"pointer"}}></img>
           </div>
         </div>
       </div>

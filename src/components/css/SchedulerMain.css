@@ -1,3 +1,67 @@
-#SchedulerMainPage{
+#scheduler-page{
     display: flex;
+}
+
+
+#event-card{
+    background-color: #b9bdf8;
+    border-radius: 5px;
+    width: 97%;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    -webkit-box-shadow:2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    border: 1px solid #464775; 
+}
+
+#scheduler-card-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 0.8rem;
+    margin-top: 10vh;
+}
+
+#deleteIcon:hover{
+    color: red;
+}
+
+#title-heading{
+    text-align: center;
+    padding-left: 2.5vw;
+    font-size: 1.5rem;
+    border-bottom: solid 2px rgb(211, 211, 211);
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+#scheduler-container{
+    flex:7.5;
+    margin-left:9vh;
+    margin-top: 5vh;
+    padding-top: 1rem;
+    height:95vh;
+    background-color: #dadae3;
+}
+
+
+#description-title{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#btn-eventadd{
+    position: fixed;
+    background-image: linear-gradient(to right,  #464775,#9fa8c3,#464775);
+    height:55px;
+    width:55px;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 45vw;
+    margin-top: 3vh;
+    border: 2px #464775;
+}
+
+#btn-eventadd:hover{
+    background-image: linear-gradient(to right,#464775,#dadae3);   
 }

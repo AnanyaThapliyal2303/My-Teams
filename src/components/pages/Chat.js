@@ -16,8 +16,10 @@ import db from "./firebase";
 import firebase from "firebase";
 import { Scrollbars } from 'react-custom-scrollbars';
 import CancelIcon from '@material-ui/icons/Cancel';
-
+import VideoCallIcon from '@material-ui/icons/VideoCall';
 import {useStateValue} from '../../StateProvider';
+
+
 
 function openEmojis() {
   if (document.getElementById("emojiPicker").style.display === "none")
@@ -32,16 +34,14 @@ function Chat() {
   const {roomId} = useParams();
   const [roomName, setRoomName] = useState("");
   const [messages, setMessages] = useState([]);
-
   const[{user}, dispatch] = useStateValue();
 
+  
   useEffect(() => {
     if(roomId){
-      db.collection('rooms')
+      db.collection("rooms")
       .doc(roomId)
-      .onSnapshot((snapshot) => setRoomName
-      (snapshot.data().name));
-        
+      .onSnapshot((snapshot) => setRoomName(snapshot.data().name));     
         db.collection("rooms")
         .doc(roomId)
         .collection("messages")
@@ -94,14 +94,45 @@ function Chat() {
     document.getElementById("analysis-result").innerHTML = "<br/>Your message generated a score of: " + result.score  + "<br/>Your message is: "+type ;
   }
 
+   //starting a new meeting within chat
+   function join() {
+    var url = Math.random().toString(36).substring(2, 7);
+    //post meeting inside db
+    db.collection("meetingLink").add({
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      meetingUrl: url,
+      fullUrl: url + " " + roomId,
+      roomId: roomId,
+    });
+
+    window.open(`/${url}`, "_blank");
+    db.collection("rooms")
+      .doc(roomId)
+      .collection("messages")
+      .add({
+        message: "Meeting Started: https://my-teams-172e9.web.app/" + url,
+        name: user.displayName,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      });
+    setInput("");
+  }
+  
+
   return (
+    
     <div id="chatBody">
       <Header />
       <div className="chat" id="chat">
         <Sidebar />
         <div className="chatMenu" id="chatMenu">
           <h2 id="chatMenuHeading">Chat</h2>
-            <ChatSidebar/>
+       <Scrollbars style={{ height:"90%"}} autoHide
+        autoHideTimeout={1000}
+        autoHideDuration={200}>
+             <ChatSidebar/>
+           
+            </Scrollbars>
+            
         </div>
         <div id="analysis-result-div">
             <CancelIcon id="cancelIcon" style={{fontSize:"20px"}} onClick={cancelAnalysisResult}/>
@@ -109,8 +140,13 @@ function Chat() {
         </div>
         <div className="chatBox" id="chatBox">
           <h3 className="userName" id="userName">
-            {roomName}
+            {roomName}    <VideoCallIcon
+            style={{ fontSize: 30, cursor:"pointer"}}
+            onClick={join}
+          />
           </h3>
+       
+
           <div style={{ display: "none" }} id="emojiPicker">
             <Picker onEmojiClick={onEmojiClick} />
             <div style={{ display: "none" }}>
@@ -154,10 +190,9 @@ function Chat() {
                   </Button>
                 </div>
               </div>
-              
-          <Scrollbars  autoHide
-        autoHideTimeout={1000}
-        autoHideDuration={200}>
+       
+
+           <Scrollbars>
               <div id="messagesWrapper">
                 {messages.map(message =>(
                         <div className={`message ${message.name ===user.displayName && `message_own`} `}>

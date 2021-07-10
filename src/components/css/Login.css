@@ -1,5 +1,5 @@
 .login {
-    background: linear-gradient(-45deg, #3e3e94, #c1c2fc, #3b3661, white);
+    background: linear-gradient(-45deg, #ffffff, #cfd0f7, #6b6b90, white);
     background-size: 400% 400%;
     animation: gradient 5s ease infinite;
   }
@@ -18,7 +18,7 @@
   }
 
 .login_container{
-    padding-top: 40vh;
+    padding-top: 8vh;
     text-align: center;
 }
 
@@ -39,4 +39,10 @@
     border-radius: 35px;
     background-color: darkgrey;
     box-shadow: 1px 1px 2px 2px;
+}
+
+.entry-image-div{
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 8vh;
 }

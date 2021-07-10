@@ -8,12 +8,10 @@ function DarkMode() {
 
   if(document.getElementById("chatBody")!=null)
   {
+  document.getElementById("chatBody").style.backgroundColor="#141414";
   document.getElementById("chatMenu").style.backgroundColor="#141414";
   document.getElementById("chatMenuHeading").style.color="white";
   document.getElementById("userName").style.color="white";
-  document.getElementById("conversationName").style.color="white";
-  document.getElementById("conversation").style.color="white";
-  document.getElementById("conversation").style.backgroundColor="rgba(99, 99, 99, 0)";
   document.getElementById("chatBox").style.backgroundColor="#1f1f1f";
   document.getElementById("sendIcon").style.backgroundColor="#1f1f1f";
   document.getElementById("chatTextInput").style.backgroundColor="#292929";
@@ -24,17 +22,34 @@ function DarkMode() {
   document.getElementById("chatBoxWrapper").style.backgroundColor="#1f1f1f";
   document.getElementById("smallIcons").style.backgroundColor="#1f1f1f";
   document.getElementById("smallIcons").style.color="white";
-  document.getElementById("chatBoxBackground").style.backgroundColor="#1f1f1f";
   document.getElementById("messagesWrapper").style.backgroundColor="#1f1f1f";
   document.getElementById("chatMenuWrapper").style.backgroundColor=" #141414";
-  document.getElementById("chatMenu").style.backgroundColor="#141414";
   document.getElementById("postAddIcon").style.color=" white";
   document.getElementById("chat-grid").style.backgroundColor="#141414";
   document.getElementById("chatBoxBackground").style.backgroundColor="#1f1f1f";
   document.getElementById("chatBoxTop").style.backgroundColor="#1f1f1f";
-  document.getElementById("lastConversation").style.color="white";
-  document.getElementById("conversationName").style.color="white";
-  }
+ 
+  document.getElementById("chat").style.backgroundColor="#141414";  
+    let y = document.getElementsByClassName("conversationName");
+    for (var j = 0; j < y.length; j++) {
+        y[j].style.color = "white";
+        y[j].style.backgroundColor = "rgba(99, 99, 99, 0)";
+      }
+
+    let x = document.getElementsByClassName("lastConversation");
+    for (var i = 0; i < x.length; i++) {
+        x[i].style.color = "white";
+        x[i].style.backgroundColor = "rgba(99, 99, 99, 0)";
+      }
+
+    let z = document.getElementsByClassName("conversation");
+    for (var k = 0; k < z.length; k++) {
+        z[k].style.backgroundColor = "rgba(99, 99, 99, 0)";
+        }
+
+    
+  document.getElementById("chatBoxBackground").style.backgroundColor="#1f1f1f";  
+}
   
   if(document.getElementById("callPage")!=null)
   {
@@ -52,7 +67,6 @@ function DarkMode() {
   if(document.getElementById("area")!=null){
     document.getElementById("area").style.backgroundColor="#252525";
   }
-  
   
 }
 

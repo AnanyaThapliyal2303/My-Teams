@@ -4,10 +4,8 @@
     padding: 10px;
     cursor: pointer;
     margin-top: 20px;
-}
-
-.conversation:hover{
-    background-color: lightgray;
+    width: 23.2vw;
+    margin-left: 1vw;
 }
 
 .conversationImg{
@@ -28,11 +26,22 @@
     white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 10rem;
 }
 
 .each-chat{
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
+    height:10vh;
+}
+
+
+.chat-grid{
+    width: 20vw;
+}
+
+
+.conversation:hover{
+    background-color: rgb(187, 185, 185);
+    margin-left: 0.3vw;
 }
