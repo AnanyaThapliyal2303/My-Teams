@@ -55,6 +55,9 @@
 :one: ***Create new events and add title, description, date and duration***\
 :two: ***Delete events as and when required***
 
+## <ins>Application Architecture</ins>
+ ![Application Architecture](./My Teams - Architecture.jpg)
+
 ## <ins>Technologies</ins>
 - React.js
 - Node.js
@@ -62,8 +65,7 @@
 - Firestore
 - WebRTC
 - Socket.io
-
-
+ 
 ## <ins>Credits</ins>
 Video Meeting component was open-sourced and re-purposed from [Video Meeting](https://github.com/0x5eba/Video-Meeting).
 
