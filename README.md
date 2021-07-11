@@ -50,6 +50,10 @@
 :three:***Cloud storage to store all your notes permanently on Firebase and Firestore***\
 :four: ***Delete and edit contents of notes body and also it's title***
 
+### E) Scheduler:
+ 
+:one: ***Create new events and add title, description, date and duration***\
+:two: ***Delete events as and when required***\
 
 ## <ins>Technologies</ins>
 - React.js
