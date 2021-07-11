@@ -53,7 +53,7 @@
 ### E) Scheduler:
  
 :one: ***Create new events and add title, description, date and duration***\
-:two: ***Delete events as and when required***\
+:two: ***Delete events as and when required***
 
 ## <ins>Technologies</ins>
 - React.js
