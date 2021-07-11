@@ -56,7 +56,7 @@
 :two: ***Delete events as and when required***
 
 ## <ins>Application Architecture</ins>
- ![Application Architecture](My Teams_Architecture.jpg)
+ ![Application Architecture](My_Teams_Architecture.jpg)
 
 ## <ins>Technologies</ins>
 - React.js
