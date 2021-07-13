@@ -2,6 +2,7 @@ import React from "react";
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import db from "../firebase";
 
+//function to delete an event
 const deleteEvent = (id) => {
     db.collection("events")
       .doc(id)

@@ -1,10 +1,12 @@
 #event-form{
-    padding-top: 0.5vh;
+    padding-top: 0.2vh;
     padding-bottom: 2vh;
-    width:13vw;
-    height: 49vh;
+    width:15.5vw;
+    height: 57vh;
     text-align: center;
     border-radius: 20px;
+    padding-right: 1.5rem;
+   
 }
 .inputs{
     margin-top: 0px;
@@ -12,11 +14,11 @@
 }
 
 #title,#desc,#date{
-    width: 11vw;
+    width: 13vw;
     margin-top: 0vh;
 }
 #starttime,#endtime{
-    width: 5vw;
+    width: 6vw;
 }
 label{
     font-size: 18px;
@@ -27,6 +29,8 @@ label{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    padding:0px;
+    margin:0px;
 }
 #submit{
     margin-top: 0.8vh;
@@ -34,15 +38,16 @@ label{
 #event-form-div{
     position: fixed;
     text-align: center;
-    height: 54vh;
-    width: 15.2vw;
+    height: 58vh;
+    width: 16vw;
     padding-left: 1vw;
     padding-right: 1vw;
     padding-top: 1vw;
-    padding-bottom: 1vw;
+    padding-bottom: 0.5vw;
     border-radius: 25px;
     border: 2px solid #575774;
-    margin-left: 39.3vw;
+    margin-left: 39vw;
     margin-top: 16vh;
     background-image: linear-gradient(to bottom, #464775, #9d9cb4);
+    z-index: 1000000;
 }

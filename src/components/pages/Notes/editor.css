@@ -27,6 +27,10 @@
     .editorContainer{
       height: 100%;
       box-sizing: border-box;
+      width: 92vw;
+      position: fixed;
+      margin-left: 19.5vw;
+      z-index: 9;
     }
     .reactQuill{
       margin-left: 0.35vw;

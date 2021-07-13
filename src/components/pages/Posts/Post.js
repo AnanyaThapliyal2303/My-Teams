@@ -23,6 +23,7 @@ function Post() {
       );
   }, []);
 
+  //this function makes uploader div visible
   function uploadClick() {
     if(document.getElementById("imageupload").style.display==="none")
       document.getElementById("imageupload").style.display="block";

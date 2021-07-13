@@ -16,6 +16,10 @@ body {
     
 }
 
+#label{
+    color: black;
+}
+
 .flex-container {
     height: 65vh;
     width: 100%;

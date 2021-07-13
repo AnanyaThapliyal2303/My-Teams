@@ -69,6 +69,7 @@ const getAllEvents = async () => {
   return meeting_link;
 };
 
+//send email from meeting using emailjs
 function sendEmail(e) {
   e.preventDefault();
 
@@ -87,6 +88,7 @@ function sendEmail(e) {
         alert(error.text);
       }
     );
+    document.getElementById("contact-form").style.display = "none";
 }
 
 //Recording
@@ -101,7 +103,7 @@ function showRecorder() {
   } else document.getElementById("recorder").style.display = "none";
 }
 function imp_alert() {
-  alert("To start Screen Recording, select Share screen");
+  //alert("To start Screen Recording, select Share screen");
 }
 
 function clickStart() {
@@ -110,10 +112,13 @@ function clickStart() {
   }, 2000);
   document.getElementById("startButton").style.visibility = "hidden";
 }
+
+
 function clickStop() {
   document.getElementById("startButton").style.visibility = "visible";
 }
 
+//whiteboard visibility function
 function showWhiteboard() {
   if (
     document.getElementById("whiteboard-container").style.visibility ===
@@ -130,6 +135,7 @@ function showWhiteboard() {
   }
 }
 
+//form to send email 
 function showForm() {
   if (document.getElementById("main") != null) {
     if (document.getElementById("contact-form").style.display === "none")
@@ -623,7 +629,7 @@ class Video extends Component {
           //Enter message in normal chat db
           db.collection("rooms").doc(roomId).collection("messages").add({
             message: this.state.message,
-            name: this.state.username,
+            name: this.state.username+" (in meeting)",
 
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
           });
@@ -637,6 +643,7 @@ class Video extends Component {
     );
   };
 
+  //copy url function
   copyUrl = () => {
     let text = window.location.href;
     if (!navigator.clipboard) {
@@ -730,7 +737,6 @@ class Video extends Component {
               <div>
                 <div id="recorder" style={{ display: "none" }}>
                   <ReactMediaRecorder
-                    screen
                     render={({
                       status,
                       startRecording,
@@ -924,7 +930,7 @@ class Video extends Component {
                       id="contact-form"
                       onSubmit={sendEmail}
                     >
-                      <label>From: </label>
+                      <label id="label">From: </label>
                       <input
                         id="inputs"
                         type="text"
@@ -932,11 +938,11 @@ class Video extends Component {
                         value={this.state.username}
                         readOnly
                       />
-                      <label>Invitee: </label>
+                      <label id="label">Invitee: </label>
                       <input id="inputs" type="text" name="to_name" />
-                      <label>Email to: </label>
+                      <label id="label">Email to: </label>
                       <input id="inputs" type="email" name="to_email" />
-                      <label>Link: </label>
+                      <label id="label">Link: </label>
                       <input
                         id="inputs"
                         name="link"

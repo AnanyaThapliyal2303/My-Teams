@@ -59,6 +59,7 @@ const handleUpload =()=>{
     );
 };
 
+//the uploader to upload images as posts
     return (
         <div id="main-upload-div">
         <div id="imageupload" className="imageupload" style={{display:"none"}}>

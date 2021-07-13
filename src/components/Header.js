@@ -10,20 +10,12 @@ import { colors } from "@material-ui/core";
 import {useStateValue} from '../StateProvider';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 
-{
-  /*function openMore(){
-    if(document.getElementById("theme").style.display==="none")
-    document.getElementById("theme").style.display="block";
-    else 
-    document.getElementById("theme").style.display="none";
-        
-} */
-}
-
+//logout function to exit the app
 function Logout(){
   window.location.replace("https://my-teams-172e9.web.app/");
 }
 
+//shows logout button on click
 function profileClick() {
   if(document.getElementById("logout").style.display==="none")
     document.getElementById("logout").style.display="block";

@@ -9,7 +9,7 @@ import AssignmentIcon from "@material-ui/icons/Assignment";
 import DescriptionIcon from '@material-ui/icons/Description';
 import { Router, Link } from "react-router-dom";
 
-
+//uses link to connect various pages with sidebar
 function Sidebar() {
   return (
     <div className="sidebar" id="sidebar">
@@ -47,13 +47,6 @@ function Sidebar() {
           icon_name="Notes"
         />
       </Link>
-
-      {/*<Link to="/todo">
-        <Sideitem
-          icon={<AssignmentIcon style={{ fontSize: 40 }} />}
-          icon_name="Todo"
-        />
-  </Link>*/}
 
     </div>
   );

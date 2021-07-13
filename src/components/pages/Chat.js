@@ -54,7 +54,7 @@ function Chat() {
   }, [roomId]);
 
   const onEmojiClick = (event, emojiObject) => {
-    setChosenEmoji(emojiObject);
+  setChosenEmoji(emojiObject);
   };
 
   const EmojiData = ({ chosenEmoji }) =>
@@ -158,12 +158,16 @@ function Chat() {
             <div id="chatBoxBackground"></div>
             <div id="chatBoxTop">
               <div className="chatBoxBottom">
+
+                //type message to send in chat
                 <Input onChange={e => setInput(e.target.value)}
                   id="chatTextInput"
                   className="chatMessageInput"
                   placeholder="Type a new message"
                   value={input}
                />
+
+               //to send message in chat
                 <SendIcon onClick={sendMessage}
                   className="sendIcon"
                   id="sendIcon"
@@ -174,6 +178,8 @@ function Chat() {
                     className="attachFileIcon"
                     style={{ fontSize: 30 }}
                   />
+
+                  //opens emoji board on click
                   <InsertEmoticonIcon
                     onClick={openEmojis}
                     className="insertEmoticonIcon"
@@ -193,6 +199,7 @@ function Chat() {
        
 
            <Scrollbars>
+             //shows all messages of a particular chat room
               <div id="messagesWrapper">
                 {messages.map(message =>(
                         <div className={`message ${message.name ===user.displayName && `message_own`} `}>

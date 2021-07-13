@@ -70,7 +70,7 @@ const EventScheduler = () => {
           />
           <div id="time">
             <div>
-              <label>Start Time:</label>
+              <label>Starts at:</label>
               <input
                 id="starttime"
                 type="time"
@@ -80,7 +80,7 @@ const EventScheduler = () => {
               />
             </div>
             <div>
-              <label>End Time:</label>
+              <label>Ends at:</label>
               <input
                 id="endtime"
                 type="time"

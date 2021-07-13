@@ -33,7 +33,7 @@ class EditorComponent extends React.Component{
             });
         }
     }
-
+    //consists of react quill to be used as editor
     render(){
 
         const {classes}= this.props;

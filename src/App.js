@@ -18,6 +18,8 @@ import Notes from "./components/pages/Notes/Notes";
 import { useStateValue } from "../src/StateProvider";
 {/*import Todo from "./components/pages/Todo/Todo";*/}
 
+
+//uses Switch and Route components to connect various pages with sidebar
 function App() {
   const [{ user }, dispatch] = useStateValue();
 
@@ -50,10 +52,6 @@ function App() {
             <Route path="/notes">
               <Notes/>
             </Route>
-
-            {/*<Route path="/todo">
-              <Todo/>
-      </Route>*/}
 
             <Route path="/home" component={Home} />
             <Route path="/:url" component={Video} />

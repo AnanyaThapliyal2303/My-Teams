@@ -62,7 +62,7 @@
   margin-top: 9vh;
   font-weight: 500;
   height: 5vh;
-  width:6vw ;
+  width:8vw ;
   padding: 2px;
   position: fixed;
   margin-left: 88vw;
@@ -71,11 +71,12 @@
   border: 2px solid #464775;
   cursor: pointer;
   text-align: center;
+  z-index: 99999;
 }
 
 #logout:hover{
   height: 5.1vh;
-  width:6.2vw ;
+  width:8.2vw ;
   background-color: #cccde0;
   z-index: 99999;
 }

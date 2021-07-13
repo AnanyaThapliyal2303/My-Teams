@@ -26,6 +26,7 @@ const EachPost = forwardRef(
       };
     }, [postId]);
 
+    //function for commenting
     const postComment = (e) => {
       e.preventDefault();
 
@@ -37,6 +38,7 @@ const EachPost = forwardRef(
     };
 
     return (
+      //template for each post
       <div className="post" ref={ref}>
         <div className="post__header">
           <Avatar

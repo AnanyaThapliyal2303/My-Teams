@@ -42,7 +42,7 @@ class Notes extends React.Component{
                             ></EditorComponent> :
                             null
                         }
-                    <div id="written-instruction">
+                    <div id="written-instruction" style={{marginLeft:"20vw"}}>
                         <ArrowBackIcon/>Open a note to view editor!
                     </div>
                 </div>

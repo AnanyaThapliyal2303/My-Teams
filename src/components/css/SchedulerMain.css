@@ -18,7 +18,8 @@
 #scheduler-card-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding-left: 0.8rem;
+    padding-left: 1.8rem;
+    padding-right:1rem;
     margin-top: 10vh;
 }
 
@@ -33,6 +34,7 @@
     border-bottom: solid 2px rgb(211, 211, 211);
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
+    font-weight: 500;
 }
 
 #scheduler-container{
@@ -42,6 +44,7 @@
     padding-top: 1rem;
     height:95vh;
     background-color: #dadae3;
+    overflow-y:hidden;
 }
 
 
@@ -60,6 +63,7 @@
     margin-left: 45vw;
     margin-top: 3vh;
     border: 2px #464775;
+    z-index: 100000000;
 }
 
 #btn-eventadd:hover{

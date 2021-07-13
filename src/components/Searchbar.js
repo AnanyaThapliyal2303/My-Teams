@@ -3,6 +3,7 @@ import "./css/Searchbar.css";
 import { Form, FormControl } from "react-bootstrap";
 import SearchIcon from "@material-ui/icons/Search";
 
+//searchbar in header
 function Searchbar() {
   return (
     <div class="container">

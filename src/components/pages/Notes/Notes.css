@@ -42,4 +42,8 @@
   .notes-flex{
     display: flex;
   }
-  
+  #written-instruction{
+    position: fixed;
+    margin-left: 19vw;
+    margin-top: 0.2vh;
+  }

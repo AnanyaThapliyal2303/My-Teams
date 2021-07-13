@@ -39,6 +39,8 @@ class Home extends Component {
   render() {
 
     function start() {
+
+      //generating url
       var url = Math.random().toString(36).substring(2, 7);
       window.open(`/${url}`,'_blank');
      
@@ -70,7 +72,8 @@ class Home extends Component {
           <div className="call_class" id="callPage">
             <div className="call_options_grid">
               <div  id="videoIcon">
-                <Link to="/video">
+                
+                <Link to="/video"> //links to Video.js page
                   <VideocamIcon
                    id="home_icon"
                     onClick={start}
@@ -82,6 +85,7 @@ class Home extends Component {
                     className="hvr-bob"
                   />
                 </Link>
+                
                 <p id="text1">New Meeting</p>
               </div>
               <div  id="addIcon">
