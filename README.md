@@ -26,7 +26,7 @@
 ### B) Social:
  
  :one: ***Members/Users can add posts to share with others such as image to update them about any event such as an upcoming workshop,a certificate received etc.***\
- :two: ***Easy upload funtion to add images in 2 clicks***\
+ :two: ***Easy upload function to add images in 2 clicks***\
  :three: ***Option to add a caption to the image while uploading***\
  :four: ***Ability for other users to view posts by others in social page and comment on the posts***\
  :five: ***All functions take place realtime and database is updated immediately when a new post/comment is added. Then it is displayed on the social page.***
